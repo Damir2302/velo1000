@@ -1,0 +1,27 @@
+mixin breadcrumbs(title, ...items)
+
+    .breadcrumbs
+
+        .container
+
+            .breadcrumbs-wrapper
+
+                .breadcrumbs-item
+                    a(href='/')
+                        i.fal.fa-house
+
+                each item in items
+
+                    if item == items[items.length - 1]
+
+                        .breadcrumbs-item
+                            span.breadcrumbs-separator —
+                            span= item
+
+                    else
+
+                        .breadcrumbs-item
+                            span.breadcrumbs-separator —
+                            a(href="#")= item
+
+            h1.page-title= title

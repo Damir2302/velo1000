@@ -1,0 +1,91 @@
+block header
+
+    header#header.header
+
+        .container
+
+            // Header Top::Start
+            .header__top
+
+                .header__logo
+                    span.logo-image
+                        img(src="assets/images/logo.png", alt="logo")
+                    span.logo-text
+                        img(src="assets/images/velo1000-mobile.png", alt="logo")
+
+                .header__right
+                    .header__menu
+                        // Navigations (mobile)
+                        .header__menu-mobile
+                            form.search-mobile
+                                input(type="search", name="" placeholder="Поиск")
+                                button(type="submit")
+
+                            .user__menu
+                                .user-icon
+                                    i.far.fa-circle-user
+                                span Войти в личный кабинет
+
+                            ul
+                                li
+                                    a(href="#") Каталог
+                                li
+                                    a(href="#") Система скидок
+                                li
+                                    a(href="#") Производители
+                                li
+                                    a(href="#") Полезные материалы
+                                li
+                                    a(href="#") Новости
+                                li
+                                    a(href="#") Сделай сам
+
+                        // Navigations
+                        ul.header__menu-list
+                            li
+                                a(href="#") Доставка и оплата
+                            li
+                                a(href="#") Доставка в регионы
+                            li
+                                a(href="#") Магазины в Москве
+                            li
+                                a(href="#") Контакты
+
+                    .header__buttons
+                        .button-search
+                            i.far.fa-search
+                        .button-user
+                            i.far.fa-circle-user
+                        .button-menu
+                            span
+            // Header Top::End
+
+            // Header Nav::Start
+            .header__nav
+                .header__nav-logo
+                    img(src="assets/images/velo1000.png", alt="logo")
+
+                nav.navbar
+
+                    .navbar__item
+                        span Каталог
+                    .navbar__item
+                        a.navbar__link(href="#") Система скидок
+                    .navbar__item
+                        a.navbar__link(href="#") Производители
+                    .navbar__item
+                        a.navbar__link(href="#") Полезные материалы
+                    .navbar__item
+                        a.navbar__link(href="#") Новости
+                    .navbar__item
+                        a.navbar__link(href="#") Сделай сам
+
+                .nav__buttons
+                    .icon-button.button-compare
+                        img(src="assets/images/compare-icon.svg", alt="svg")
+                    .icon-button.icon-button.button-favorite
+                        i.far.fa-heart
+                    .icon-button.button-cart
+                        i.far.fa-cart-shopping
+                        span 1
+            // Header Nav::End

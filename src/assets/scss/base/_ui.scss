@@ -1,0 +1,83 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    -webkit-text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+body b {
+    font-weight: 600;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+
+    @include breakpoint(lg) {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+background: rgba(90, 90, 90, 0.2);
+}
+
+::-webkit-scrollbar-track {
+background: rgba(0, 0, 0, 0.2);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+main {
+    min-height: calc(max(calc(100vh - 614px), 600px));
+}
+
+#page {
+    position: relative;
+    min-width: 320px;
+    min-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#page.bg-overlay::before {
+
+    @include breakpointMax(lg) {
+        content: '';
+        background: #3a3f44;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        z-index: 2;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    max-width: 1200px;
+    box-sizing: content-box;
+}
+
+button {
+    position: relative;
+}

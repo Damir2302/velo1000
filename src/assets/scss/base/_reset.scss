@@ -1,0 +1,72 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, img, ol, ul, li, figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    user-select: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+textarea:focus {
+    border: none;
+    outline: none;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+section {
+    clear: both;
+}
