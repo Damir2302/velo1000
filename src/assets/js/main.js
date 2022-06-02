@@ -10,22 +10,31 @@ $(document).ready(function() {
     })
 
     // Menu
-    const $nav = $('.header__menu');
-    const $btn = $('.hidden-list span');
-    const $hList = $('.hidden-list ul');
-    const $vList = $('.header__menu-list');
-    const breaks = [];
+    const $nav = $('.header__menu')
+    const $btn = $('.hidden-list span')
+    const $vList = $('.header__menu-list')
+    const $hList = $('.hidden-list ul')
+    const $hListMenu = $('.hidden-list')
+    const breaks = []
 
     function updateNav() {
-        let availableSpace = $nav.width() - $btn.width() - 30;
-        console.log(availableSpace)
+        let availableSpace = $nav.width() - $btn.width() - 30.5;
         if ($vList.width() > availableSpace) {
-            breaks.push($vList.width());
-            $vList.children().last().prependTo($hList);
+            breaks.push($vList.width())
+            $vList.children().last().prependTo($hList)
+
+            if ($hListMenu.hasClass('hidden')) {
+                $hListMenu.removeClass('hidden')
+            }
+
         } else {
             if (availableSpace > breaks[breaks.length - 1]) {
-              $hList.children().first().appendTo($vList);
-              breaks.pop();
+              $hList.children().first().appendTo($vList)
+              breaks.pop()
+            }
+
+            if (breaks.length < 1) {
+                $hListMenu.addClass('hidden');
             }
           }
 

@@ -70,6 +70,7 @@
         all: unset;
         margin-left: 20px;
         display: flex;
+        width: 100%;
     }
 }
 
@@ -217,6 +218,13 @@
     @include breakpoint(md) {
         display: block;
         line-height: 1;
+    }
+}
+
+.hidden-list.hidden {
+
+    @include breakpoint(md) {
+        display: none;
     }
 }
 
