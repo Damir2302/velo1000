@@ -2,90 +2,113 @@ block header
 
     header#header.header
 
-        .container
+        // Header Top::Start
+        .header__top
 
-            // Header Top::Start
-            .header__top
+            .container
 
-                .header__logo
-                    span.logo-image
-                        img(src="assets/images/logo.png", alt="logo")
-                    span.logo-text
-                        img(src="assets/images/velo1000-mobile.png", alt="logo")
+                .header__top-wrapper
 
-                .header__right
-                    .header__menu
-                        // Navigations (mobile)
-                        .header__menu-mobile
-                            form.search-mobile
-                                input(type="search", name="" placeholder="Поиск")
-                                button(type="submit")
+                    .header__logo
+                        span.logo-image
+                            img(src="assets/images/logo.png", alt="logo")
+                        span.logo-text
+                            img(src="assets/images/velo1000-mobile.png", alt="logo")
 
-                            .user__menu
-                                .user-icon
-                                    i.far.fa-circle-user
-                                span Войти в личный кабинет
+                    .header__right
+                        .header__menu
+                            // Navigations (mobile)
+                            .header__menu-mobile
+                                form.search-mobile
+                                    input(type="search", name="" placeholder="Поиск")
+                                    button.button-style.button-style--red(type="submit") Поиск
 
-                            ul
+                                a.user__menu(href="#")
+                                    span.user-icon
+                                        i.far.fa-circle-user
+                                    p Войти в личный кабинет
+
+                                ul.menu__mobile
+                                    li.menu__mobile-item
+                                        span Каталог
+                                        ul.submenu__mobile
+                                            li
+                                                a(href="#") Адаптер
+                                            li
+                                                a(href="#") Болт
+                                            li
+                                                a(href="#") Велокомпьютер
+                                            li
+                                                a(href="#") Втулка задняя
+                                            li
+                                                a(href="#") Гайка
+                                    li.menu__mobile-item
+                                        a(href="#").menu__mobile-link Система скидок
+                                    li.menu__mobile-item
+                                        a(href="#").menu__mobile-link Производители
+                                    li.menu__mobile-item
+                                        a(href="#").menu__mobile-link Полезные материалы
+                                    li.menu__mobile-item
+                                        a(href="#").menu__mobile-link Новости
+                                    li.menu__mobile-item
+                                        a(href="#").menu__mobile-link Сделай сам
+
+                            // Navigations
+                            ul.header__menu-list
                                 li
-                                    a(href="#") Каталог
+                                    a(href="#") Доставка и оплата
                                 li
-                                    a(href="#") Система скидок
+                                    a(href="#") Доставка в регионы
                                 li
-                                    a(href="#") Производители
+                                    a(href="#") Магазины в Москве
                                 li
-                                    a(href="#") Полезные материалы
-                                li
-                                    a(href="#") Новости
-                                li
-                                    a(href="#") Сделай сам
+                                    a(href="#") Контакты
 
-                        // Navigations
-                        ul.header__menu-list
-                            li
-                                a(href="#") Доставка и оплата
-                            li
-                                a(href="#") Доставка в регионы
-                            li
-                                a(href="#") Магазины в Москве
-                            li
-                                a(href="#") Контакты
+                            .hidden-list
+                                span Ещё
+                                ul
 
-                    .header__buttons
-                        .button-search
-                            i.far.fa-search
-                        .button-user
-                            i.far.fa-circle-user
-                        .button-menu
-                            span
-            // Header Top::End
+                        .header__buttons
+                            .button-search
+                                i.far.fa-search
+                            .button-user
+                                i.far.fa-circle-user
+                                span Войти
+                            .button-menu
+                                span
+        // Header Top::End
 
-            // Header Nav::Start
-            .header__nav
-                .header__nav-logo
-                    img(src="assets/images/velo1000.png", alt="logo")
+        // Header Nav::Start
+        .header__nav
 
-                nav.navbar
+            .container
 
-                    .navbar__item
-                        span Каталог
-                    .navbar__item
-                        a.navbar__link(href="#") Система скидок
-                    .navbar__item
-                        a.navbar__link(href="#") Производители
-                    .navbar__item
-                        a.navbar__link(href="#") Полезные материалы
-                    .navbar__item
-                        a.navbar__link(href="#") Новости
-                    .navbar__item
-                        a.navbar__link(href="#") Сделай сам
+                .header__nav-wrapper
 
-                .nav__buttons
-                    .icon-button.button-compare
-                        img(src="assets/images/compare-icon.svg", alt="svg")
-                    .icon-button.icon-button.button-favorite
-                        i.far.fa-heart
-                    .icon-button.button-cart
-                        i.far.fa-cart-shopping
-                        span 1
-            // Header Nav::End
+                    .header__nav-logo
+                        img(src="assets/images/velo1000.png", alt="logo")
+
+                    nav.navbar
+
+                        .navbar__item
+                            a.navbar__link(href="#") Каталог
+                        .navbar__item
+                            a.navbar__link(href="#") Система скидок
+                        .navbar__item
+                            a.navbar__link(href="#") Производители
+                        .navbar__item
+                            a.navbar__link(href="#") Полезные материалы
+                        .navbar__item
+                            a.navbar__link(href="#") Новости
+                        .navbar__item
+                            a.navbar__link(href="#") Сделай сам
+
+                    .nav__buttons
+                        .icon-button.button-compare
+                            img(src="assets/images/compare-icon.svg", alt="svg")
+                        .icon-button.icon-button.button-favorite
+                            i.far.fa-heart
+                        .icon-button.button-cart
+                            i.far.fa-cart-shopping
+                            span 1
+        // Header Nav::End

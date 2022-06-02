@@ -75,9 +75,51 @@ main {
     padding: 0 20px;
     position: relative;
     max-width: 1200px;
-    box-sizing: content-box;
+    box-sizing: border-box;
+
+    @include breakpoint(md) {
+        padding: 0 30px;
+    }
+}
+
+input {
+    border: none;
+    outline: none;
+    border-radius: 3px;
 }
 
 button {
     position: relative;
+}
+
+i {
+    font-size: 20px;
+}
+
+.button-style {
+    padding: 14px 30px;
+    display: block;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.36;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.button-style--red {
+    background: $red;
+    color: #fff;
+}
+
+.button-style--transparent_red {
+    background: transparent;
+    color: $red;
+    border: 1px solid $red;
+}
+
+.button-style--transparent_black {
+    background: transparent;
+    color: $black;
+    border: 1px solid $black;
 }
