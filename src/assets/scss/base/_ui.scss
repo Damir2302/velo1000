@@ -74,11 +74,15 @@ main {
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
-    max-width: 1200px;
+    max-width: 1280px;
     box-sizing: border-box;
 
     @include breakpoint(md) {
         padding: 0 30px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0 40px;
     }
 }
 

@@ -64,7 +64,7 @@ block header
                                 li
                                     a(href="#") Контакты
 
-                            .hidden-list
+                            .hidden-menu
                                 span Ещё
                                 ul
 
@@ -90,25 +90,33 @@ block header
 
                     nav.navbar
 
-                        .navbar__item
-                            a.navbar__link(href="#") Каталог
-                        .navbar__item
-                            a.navbar__link(href="#") Система скидок
-                        .navbar__item
-                            a.navbar__link(href="#") Производители
-                        .navbar__item
-                            a.navbar__link(href="#") Полезные материалы
-                        .navbar__item
-                            a.navbar__link(href="#") Новости
-                        .navbar__item
-                            a.navbar__link(href="#") Сделай сам
+                        .navbar__inner
 
-                    .nav__buttons
-                        .icon-button.button-compare
-                            img(src="assets/images/compare-icon.svg", alt="svg")
-                        .icon-button.icon-button.button-favorite
-                            i.far.fa-heart
-                        .icon-button.button-cart
-                            i.far.fa-cart-shopping
-                            span 1
+                            .navbar__menu
+
+                                .navbar__item
+                                    a.navbar__link(href="#") Каталог
+                                .navbar__item
+                                    a.navbar__link(href="#") Система скидок
+                                .navbar__item
+                                    a.navbar__link(href="#") Производители
+                                .navbar__item
+                                    a.navbar__link(href="#") Полезные материалы
+                                .navbar__item
+                                    a.navbar__link(href="#") Новости
+                                .navbar__item
+                                    a.navbar__link(href="#") Сделай сам
+
+                            .hidden-navbar
+                                span Ещё
+                                .hidden-list
+
+                        .navbar__buttons
+                            .icon-button.button-compare
+                                img(src="assets/images/compare-icon.svg", alt="svg")
+                            .icon-button.icon-button.button-favorite
+                                i.far.fa-heart
+                            .icon-button.button-cart
+                                i.far.fa-cart-shopping
+                                span 1
         // Header Nav::End
