@@ -22,7 +22,7 @@
 
 .logo-image {
     position: absolute;
-    top: -5px;
+    top: -9px;
     display: inline-block;
     width: 50px;
     height: 57px;
@@ -68,6 +68,25 @@
     }
 }
 
+.header__promo {
+    display: none;
+
+    @include breakpoint(xl) {
+        margin-right: 30px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.header__promo span {
+
+    @include breakpoint(xl) {
+        font-size: 12px;
+        line-height: 18px;
+        color: #333;
+    }
+}
+
 .header__menu {
     padding: 56px 20px 0;
     background: $black;
@@ -79,6 +98,7 @@
     z-index: 1;
     box-sizing: border-box;
     transition: all 0.5s ease;
+    overflow-y: scroll;
 
     @include breakpoint(md) {
         all: unset;
@@ -438,6 +458,7 @@
 
 .header__nav-wrapper {
     padding: 17px 0;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -535,24 +556,100 @@
     }
 }
 
-.navbar__item:first-child {
+.navbar-has-submenu {
     display: flex;
+
+    @include breakpoint(md) {
+        cursor: pointer;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 4px;
+    }
 }
 
-.navbar__item:first-child::before {
+.navbar-has-submenu::before {
     content: '\f0c9';
     margin-right: 5px;
     font-family: $icon;
     font-weight: 400;
 }
 
-.navbar__item:first-child::after {
+.navbar-has-submenu::after {
     content: '\f078';
     margin-top: 3px;
     margin-left: 5px;
     font-family: $icon;
     font-weight: 400;
     font-size: 8px;
+    transition: all .5s ease;
+}
+
+.navbar-has-submenu.active::after {
+    margin-bottom: 3px;
+    transform: rotate(180deg);
+}
+
+.navbar-has-submenu:hover .navbar__submenu {
+
+    @include breakpoint(md) {
+        display: flex;
+    }
+}
+
+.navbar__submenu {
+    position: absolute;
+    top: calc(100% + 2px);
+    // display: none;
+    width: 100%;
+
+    @include breakpoint(md) {
+        padding: 20px 0 21px;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+    }
+}
+
+.navbar__submenu-item {
+    border-bottom: 1px solid #E7E7E7;
+
+    @include breakpoint(md) {
+        width: 33.333%;
+        border: none;
+    }
+
+    @include breakpoint(lg) {
+        width: calc((100% - 90px) / 4);
+    }
+
+    @include breakpoint(xl) {
+        width: calc((100% - 120px) / 5);
+    }
+}
+
+.navbar__submenu-item:last-child {
+    border: none;
+}
+
+.navbar__submenu-link {
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $black;
+    text-transform: none;
+
+    @include breakpoint(md) {
+        margin-bottom: 12px;
+        padding: 0;
+    }
+
+    @include breakpoint(xl) {
+        font-weight: 500;
+    }
 }
 
 .hidden-navbar {

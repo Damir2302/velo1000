@@ -3,6 +3,8 @@ $(document).ready(function() {
     // Header menu
     $('.button-menu').on('click', function() {
         $('.header__right').toggleClass('mobile-menu')
+        $('.submenu__mobile').slideUp()
+        $('body').toggleClass('overflow-hidden')
     })
 
     $('.menu__mobile-item span').on('click', function() {
@@ -66,7 +68,7 @@ $(document).ready(function() {
         if ($(window).width() >= 744 && $(window).width() < 768) {
             availableSpace = $navbar.width() - $navbarBtn.width() - 10;
         } else if ($(window).width() >= 786) {
-            availableSpace = $navbar.width() - $navbarBtn.width() - 85;
+            availableSpace = $navbar.width() - $navbarBtn.width() - 65; //85
         }
         if ($nav_vList.width() > availableSpace) {
             nav_breaks.push($nav_vList.width())
@@ -100,6 +102,19 @@ $(document).ready(function() {
 
     if ($(window).width() >= 744) {
         updateNavbar()
+    }
+
+    // Categories
+    if ($(window).width() < 744) {
+
+        $('.navbar__link').on('click', function(e) {
+            e.preventDefault()
+        })
+
+        $('.navbar-has-submenu').on('click', function() {
+            $(this).find('.navbar__submenu').slideToggle()
+            $(this).toggleClass('active')
+        })
     }
 
 });
