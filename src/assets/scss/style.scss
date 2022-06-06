@@ -1,6 +1,8 @@
 $red: #BF0F0F;
 $black: #0E0E0E;
 
+@import 'plugins/swiper-bundle';
+
 @import 'base/mixins';
 @import 'base/normalize';
 @import 'base/fonts';

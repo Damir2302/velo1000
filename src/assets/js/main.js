@@ -68,7 +68,7 @@ $(document).ready(function() {
         if ($(window).width() >= 744 && $(window).width() < 768) {
             availableSpace = $navbar.width() - $navbarBtn.width() - 10;
         } else if ($(window).width() >= 786) {
-            availableSpace = $navbar.width() - $navbarBtn.width() - 65; //85
+            availableSpace = $navbar.width() - $navbarBtn.width() - 40; //85
         }
         if ($nav_vList.width() > availableSpace) {
             nav_breaks.push($nav_vList.width())
@@ -111,9 +111,12 @@ $(document).ready(function() {
             e.preventDefault()
         })
 
+        let navbarMenuHeight = $('.navbar__submenu').innerHeight()
+
         $('.navbar-has-submenu').on('click', function() {
             $(this).find('.navbar__submenu').slideToggle()
             $(this).toggleClass('active')
+            $('#main').css('min-height', navbarMenuHeight + 'px')
         })
     }
 
