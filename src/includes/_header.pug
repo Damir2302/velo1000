@@ -102,16 +102,16 @@ block header
 
                             .hidden-menu
                                 span Ещё
-                                ul
+                                ul.animate__animated.animate__fadeIn
 
                         // Header buttons
                         .header__buttons
-                            .button-search
+                            .button-header.button-search
                                 i.far.fa-search
-                            .button-user
+                            .button-header.button-user
                                 i.far.fa-circle-user
                                 span Войти
-                            .button-menu
+                            .button-header.button-menu
                                 span
 
                         // Search form
@@ -119,9 +119,11 @@ block header
                             .container
                                 form
                                     input(type="search", name="" placeholder="Поиск")
-                                    button.button-style.button-style--red(type="submit") Поиск
-                                    .search-close-btn
-                                        i.fas.fa-circle-xmark
+
+                                    .form-actions
+                                        button.button-style.button-style--red(type="submit") Поиск
+                                        .search-close-btn
+                                            i.fal.fa-xmark-large
 
         // Header Top::End
 
@@ -143,7 +145,7 @@ block header
 
                                 .navbar__item.navbar-has-submenu
                                     a.navbar__link(href="#") Каталог
-                                    ul.navbar__submenu
+                                    ul.navbar__submenu.animate__animated.animate__fadeIn
                                         li.navbar__submenu-item
                                             a.navbar__submenu-link(href="#") Адаптер
                                         li.navbar__submenu-item
@@ -202,14 +204,161 @@ block header
 
                             .hidden-navbar
                                 span Ещё
-                                .hidden-list
+                                .hidden-list.animate__animated.animate__fadeIn
 
+                        // NAVBAR BUTTONS
                         .navbar__buttons
-                            .icon-button.button-compare
-                                img(src="assets/images/compare-icon.svg", alt="svg")
-                            .icon-button.icon-button.button-favorite
-                                i.far.fa-heart
-                            .icon-button.button-cart
-                                i.far.fa-cart-shopping
-                                span 1
+                            .small-button.button-compare
+                                a.small-button__link(href="#")
+                                    .icon-btn
+                                        img(src="assets/images/compare-icon.svg", alt="svg")
+
+                                // SMALL CART POPUP
+                                .small-btn.animate__animated.animate__fadeIn
+
+                                    .small-btn__head
+
+                                        .close-btn
+
+                                        div
+                                            span.small-btn__label Товары к сравнению
+                                            span.small-btn__qt 2 товара
+                                        button.button-style.button-style--transparent_black
+                                            i.far.fa-xmark-large
+                                            span Очистить
+
+                                    .small-btn__body
+
+                                        .small-btn__block
+                                            button.small-btn__remove-item
+                                                i.fal.fa-xmark-large
+                                            .small-btn__image
+                                                img(src="assets/images/item2.jpg", alt="img")
+                                            .small-btn__desc
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit ad
+                                                .small-btn__info
+                                                    span 2 000 000 ₽
+
+                                        .small-btn__block
+                                            button.small-btn__remove-item
+                                                i.fal.fa-xmark-large
+                                            .small-btn__image
+                                                img(src="assets/images/item2.jpg", alt="img")
+                                            .small-btn__desc
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor sit ad
+                                                .small-btn__info
+                                                    span 2 000 000 ₽
+
+                                    .small-btn__footer
+
+                                        button.button-style.button-style--red Перейти к сравнению
+
+                            .small-button.button-favorite
+                                a.small-button__link(href="#")
+                                    .icon-btn
+                                        i.far.fa-heart
+
+                                // SMALL CART POPUP
+                                .small-btn.animate__animated.animate__fadeIn
+
+                                    .small-btn__head
+
+                                        .close-btn
+
+                                        div
+                                            span.small-btn__label Избранные товары
+                                            span.small-btn__qt 2 товара
+                                        button.button-style.button-style--transparent_black
+                                            i.far.fa-xmark-large
+                                            span Очистить
+
+                                    .small-btn__body
+
+                                        .small-btn__block
+                                            button.small-btn__remove-item
+                                                i.fal.fa-xmark-large
+                                            .small-btn__image
+                                                img(src="assets/images/item3.jpg", alt="img")
+                                            .small-btn__desc
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dol sit ad
+                                                .small-btn__info
+                                                    span 5 000 000 ₽
+                                                    button.button-style.button-style--red
+                                                        i.far.fa-cart-shopping
+
+                                        .small-btn__block
+                                            button.small-btn__remove-item
+                                                i.fal.fa-xmark-large
+                                            .small-btn__image
+                                                img(src="assets/images/item3.jpg", alt="img")
+                                            .small-btn__desc
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dol sit ad
+                                                .small-btn__info
+                                                    span 5 000 000 ₽
+                                                    button.button-style.button-style--red
+                                                        i.far.fa-cart-shopping
+
+                                    .small-btn__footer
+
+                                        button.button-style.button-style--red Перейти в избранное
+
+                            .small-button.button-cart
+                                a.small-button__link(href="#")
+                                    .icon-btn
+                                        i.far.fa-cart-shopping
+                                        span.quantity-icon 1
+
+                                // SUCCESSFUL ADDED POPUP
+                                .notify-cart
+                                    .notify-cart__image
+                                        img(src="assets/images/item.jpg", alt="img")
+
+
+                                // SMALL CART POPUP
+                                .small-btn.animate__animated.animate__fadeIn
+
+                                    .small-btn__head
+
+                                        .close-btn
+
+                                        div
+                                            span.small-btn__label Ваша корзина
+                                            span.small-btn__qt 2 товара
+                                        button.button-style.button-style--transparent_black
+                                            i.far.fa-xmark-large
+                                            span Очистить
+
+                                    .small-btn__body
+
+                                        .small-btn__block
+                                            button.small-btn__remove-item
+                                                i.fal.fa-xmark-large
+                                            .small-btn__image
+                                                img(src="assets/images/item.jpg", alt="img")
+                                            .small-btn__desc
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dol sit ad
+                                                .small-btn__info
+                                                    span 10 000 000 ₽
+                                                    button.small-btn__button
+                                                        i.far.fa-heart
+
+                                        .small-btn__block
+                                            button.small-btn__remove-item
+                                                i.fal.fa-xmark-large
+                                            .small-btn__image
+                                                img(src="assets/images/item.jpg", alt="img")
+                                            .small-btn__desc
+                                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dol sit ad
+                                                .small-btn__info
+                                                    span 10 000 000 ₽
+                                                    button.small-btn__button
+                                                        i.far.fa-heart
+
+                                    .small-btn__footer
+
+                                        .small-btn__total
+                                            span.small-btn__label Итого
+                                            span.small-btn__price 10 000 500 ₽
+                                        button.button-style.button-style--red Оформить заказ
+
         // Header Nav::End

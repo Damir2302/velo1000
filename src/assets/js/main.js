@@ -120,4 +120,35 @@ $(document).ready(function() {
         })
     }
 
+    // Header search
+    $('.button-search').on('click', function() {
+        $('.header__search').addClass('active')
+        $('body').addClass('overflow-hidden')
+        $('#page').addClass('bg-overlay')
+    })
+
+    $('.search-close-btn').on('click', function() {
+        $('.header__search').removeClass('active')
+        $('body').removeClass('overflow-hidden')
+        $('#page').removeClass('bg-overlay')
+    })
+
+    $('html').click(function(e) {
+        if (!$(e.target).closest('.header__search').length && !$(e.target).closest('.button-search').length) {
+            $('.header__search').removeClass('active')
+            $('body').removeClass('overflow-hidden')
+            $('#page').removeClass('bg-overlay')
+        }
+    })
+
+    // Navbar buttons
+    $('.small-button').on('click', function(e) {
+        $('.small-button').find('.small-btn').removeClass('active');
+        $(this).find('.small-btn').addClass('active');
+
+        if (e.target.className == 'close-btn') {
+            $('.small-button').find('.small-btn').removeClass('active');
+        }
+    })
+
 });
