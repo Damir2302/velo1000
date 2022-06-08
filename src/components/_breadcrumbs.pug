@@ -7,21 +7,18 @@ mixin breadcrumbs(title, ...items)
             .breadcrumbs-wrapper
 
                 .breadcrumbs-item
-                    a(href='/')
-                        i.fal.fa-house
+                    a(href='/') Главная
 
                 each item in items
 
                     if item == items[items.length - 1]
-
+                        span.breadcrumbs-separator
                         .breadcrumbs-item
-                            span.breadcrumbs-separator —
                             span= item
 
                     else
-
+                        span.breadcrumbs-separator
                         .breadcrumbs-item
-                            span.breadcrumbs-separator —
                             a(href="#")= item
 
             h1.page-title= title

@@ -124,6 +124,11 @@ i {
 .button-style--red {
     background: $red;
     color: #fff;
+    transition: all 0.5s ease;
+}
+
+.button-style--red:hover {
+    background: #9d0c0c;
 }
 
 .button-style--transparent_red {
@@ -136,4 +141,133 @@ i {
     background: transparent;
     color: $black;
     border: 1px solid $black;
+}
+
+input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    box-sizing: content-box;
+}
+
+.input-style {
+    position: relative;
+    border: 1px solid #E7E7E7;
+    border-radius: 3px;
+}
+
+.input-label {
+    position: absolute;
+    font-size: 12px;
+    color: $black;
+    z-index: -1;
+    user-select: none;
+
+    @include breakpoint(md) {
+        font-size: 14px;
+    }
+}
+
+.input-label::before {
+    content: "*";
+    color: $red;
+}
+
+.pass-view {
+    cursor: pointer;
+}
+
+.pass-view::after {
+    content: "\f06e";
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    display: block;
+    font-family: $icon;
+    font-weight: 400;
+    font-size: 14px;
+    color: #BDBDBD;
+    transition: all 0.5s ease;
+}
+
+.pass-view:hover::after {
+    color: #707070;
+}
+
+.pass-view.show::after {
+    content: "\f070";
+}
+
+.input-checkbox-circle {
+    position: relative;
+}
+
+.input-checkbox-circle .checkbox-bg {
+    background: #D9D9D9;
+    position: relative;
+    width: 36px;
+    height: 20px;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.input-checkbox-circle .checkbox-bg::after {
+    content: '';
+    background: #FFFFFF;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.input-checkbox-circle input[type="checkbox"]:checked + .checkbox-bg {
+    background: #45B04A;
+}
+
+.input-checkbox-circle input[type="checkbox"]:checked + .checkbox-bg::after {
+    left: 18px;
+}
+
+.input-checkbox-circle input {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+h1, h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: $black;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        font-size: 25px;
+    line-height: 34px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 30px;
+        line-height: 41px;
+    }
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: $black;
+    text-transform: uppercase;
+}
+
+.page-title {
+    margin-top: 40px;
 }

@@ -1,0 +1,66 @@
+.popup-auth.animate__animated.animate__fadeIn
+
+    .popup-auth__inner
+
+        .close-auth
+
+        h3.auth__title Авторизация
+
+        .auth__label(data-index="0")
+            .auth__tab(data-active="0") Вход
+            .auth__tab(data-active="1") Регистрация
+
+        .auth__body(data-show="0")
+
+            // LOGIN
+            .auth__login.animate__animated.animate__fadeIn
+
+                form
+                    .input-style
+                        label.input-label Логин
+                        input(type="text" required)
+
+                    .input-style
+                        label.input-label Пароль
+                        input(type="password" required)
+
+                    .form-bottom
+                        .auth__checkbox
+                            label.input-checkbox-circle(for="remember")
+                                input#remember(type="checkbox", name="" aria-hidden="true")
+                                .checkbox-bg
+                            span Запомнить меня
+                        a.forgot-pass(href="#") Забыли пароль
+
+                    button#submitLogin.button-style.button-style--red(type="submit") Войти
+
+            // REGISTER
+            .auth__register.animate__animated.animate__fadeIn
+
+                form(method="POST" name="registration")
+                    .input-style
+                        label.input-label Логин
+                        input(type="text" name="login" required)
+
+                    .input-style
+                        label.input-label E-mail
+                        input(type="email" name="email" required)
+
+                    .input-style
+                        label.input-label Пароль
+                        input(type="password" name="password" required)
+                        .pass-view
+
+                    .input-style
+                        label.input-label Подтверждение пароля
+                        input(type="password" name="confirm_password" required)
+                        .pass-view
+
+                    .form-bottom
+                        .auth__checkbox
+                            label.input-checkbox-circle(for="policy")
+                                input#policy(type="checkbox", name="agree" required aria-hidden="true")
+                                .checkbox-bg
+                            span.policy-info Я согласен на обработку <a href="#">персональных данных</a>
+
+                    button#submitRegist.button-style.button-style--red(type="submit") зарегистрироваться

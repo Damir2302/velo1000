@@ -134,10 +134,15 @@ $(document).ready(function() {
     })
 
     $('html').click(function(e) {
-        if (!$(e.target).closest('.header__search').length && !$(e.target).closest('.button-search').length) {
+        if (!$(e.target).closest('.header__search').length &&
+            !$(e.target).closest('.button-search').length &&
+            !$(e.target).closest('.user__menu').length &&
+            !$(e.target).closest('.button-acc').length &&
+            !$(e.target).closest('.popup-auth__inner').length) {
             $('.header__search').removeClass('active')
             $('body').removeClass('overflow-hidden')
             $('#page').removeClass('bg-overlay')
+            $('.popup-auth').removeClass('open')
         }
     })
 

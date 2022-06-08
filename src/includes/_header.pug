@@ -25,7 +25,7 @@ block header
                                     input(type="search", name="" placeholder="Поиск")
                                     button.button-style.button-style--red(type="submit") Поиск
 
-                                a.user__menu(href="#")
+                                .user__menu
                                     span.user-icon
                                         i.far.fa-circle-user
                                     p Войти в личный кабинет
@@ -108,8 +108,22 @@ block header
                         .header__buttons
                             .button-header.button-search
                                 i.far.fa-search
-                            .button-header.button-user
-                                i.far.fa-circle-user
+                            .button-header.button-profile
+                                a.button-profile__link(href="#")
+                                    i.far.fa-circle-user
+                                .profile-popup.animate__animated.animate__fadeIn.animate__faster
+                                    a.profile-popup__link(href="#") Личные данные
+                                    a.profile-popup__link(href="#") Текущие заказы
+                                    a.profile-popup__link(href="#") История заказов
+                                    a.profile-popup__link(href="#") Магазины
+                                    a.profile-popup__link(href="#") FAQ
+                                    a.profile-popup__link(href="#") Правила продажи
+                                    a.profile-popup__link(href="#") Способы оплаты/доставки
+                                    a.profile-popup__link(href="#") Магазины
+                                    a.profile-popup__link(href="#") Правила возврата
+                                    a.profile-popup__link(href="#") Контакты
+
+                            .button-header.button-acc
                                 span Войти
                             .button-header.button-menu
                                 span
@@ -308,12 +322,6 @@ block header
                                         i.far.fa-cart-shopping
                                         span.quantity-icon 1
 
-                                // SUCCESSFUL ADDED POPUP
-                                .notify-cart
-                                    .notify-cart__image
-                                        img(src="assets/images/item.jpg", alt="img")
-
-
                                 // SMALL CART POPUP
                                 .small-btn.animate__animated.animate__fadeIn
 
@@ -361,4 +369,12 @@ block header
                                             span.small-btn__price 10 000 500 ₽
                                         button.button-style.button-style--red Оформить заказ
 
+                            // Уведомление о добавлении товара в корзину
+                            .notify-cart.animate__animated.animate__fadeInDown
+                                .notify-cart__image
+                                    img(src="assets/images/item.jpg", alt="img")
+                                .notify-cart__desc
+                                    span.notify-cart__label Добавлено в корзину
+                                    span.notify-cart__item BIG BETTY 27,5х2,4
+                                .notify-close
         // Header Nav::End
