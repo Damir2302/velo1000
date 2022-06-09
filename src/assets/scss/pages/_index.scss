@@ -1,0 +1,79 @@
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.banner::before {
+    content: "";
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92));
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.banner__slide {
+    padding: 30px 0 80px;
+    display: flex;
+
+    @include breakpoint(md) {
+        padding: 45px 0 100px;
+    }
+}
+
+.banner__title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 136.5%;
+    text-align: center;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $black;
+
+    @include breakpoint(md) {
+        text-align: left;
+    }
+}
+
+.banner__subtitle {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 170%;
+    text-align: center;
+    color: #3F3F3F;
+
+    @include breakpoint(md) {
+        margin-top: 20px;
+        text-align: left;
+    }
+}
+
+.banner__button {
+    margin: 40px auto 0;
+    max-width: 204px;
+    font-size: 14px;
+
+    @include breakpoint(md) {
+        margin: 40px 0 0;
+    }
+}
+
+.banner__image {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
+
+.banner__pagination {
+    bottom: 30px!important;
+
+    @include breakpoint(md) {
+        left: unset!important;
+        width: auto!important;
+    }
+}

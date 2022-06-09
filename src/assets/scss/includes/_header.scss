@@ -100,6 +100,7 @@
     box-sizing: border-box;
     transition: all 0.5s ease;
     overflow-y: scroll;
+    z-index: 9;
 
     @include breakpoint(md) {
         all: unset;
@@ -327,7 +328,7 @@
         color: #333;
         border: 1px solid #E7E7E7;
         border-radius: 0px 0px 15px 15px;
-        z-index: 1;
+        z-index: 2;
     }
 }
 
@@ -400,7 +401,7 @@
     width: 256px;
     border: 1px solid #E7E7E7;
     border-radius: 0px 0px 15px 15px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .profile-popup::before {
@@ -458,7 +459,7 @@
     width: 24px;
     height: 24px;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 9;
 
     @include breakpoint(md) {
         display: none;
@@ -750,13 +751,14 @@
     background: #fff;
     position: absolute;
     top: calc(100% + 2px);
+    left: 0;
     display: none;
     width: 100%;
+    z-index: 2;
 
     @include breakpoint(md) {
         padding: 20px 30px 21px;
         top: 100%;
-        left: 0;
         flex-wrap: wrap;
         column-gap: 30px;
     }
@@ -788,7 +790,7 @@
 }
 
 .navbar__submenu-link {
-    padding: 10px 0;
+    padding: 10px 20px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -868,7 +870,7 @@
         color: #fff;
         border: 1px solid #E7E7E7;
         border-radius: 0px 0px 15px 15px;
-        z-index: 1;
+        z-index: 2;
     }
 }
 
@@ -969,6 +971,7 @@
     width: 100%;
     background: #F7F7F7;
     transition: right 0.5s ease;
+    z-index: 2;
 
     @include breakpoint(md) {
         padding: 20px;

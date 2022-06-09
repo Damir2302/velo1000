@@ -1,0 +1,265 @@
+.footer {
+    padding: 30px 0 50px;
+    background: $black;
+
+    @include breakpoint(md) {
+        padding: 60px 0 36px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 90px 0 40px;
+    }
+}
+
+.footer__inner {
+    border-bottom: 1px solid #5B5B5B;
+
+    @include breakpoint(md) {
+        display: flex;
+    }
+}
+
+.footer__logo {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 17px;
+
+    @include breakpoint(md) {
+        display: block;
+        flex-basis: calc(25% - 11px);
+        flex-shrink: 0;
+    }
+}
+
+.footer__logo-image {
+    flex-basis: 105px;
+    flex-shrink: 0;
+}
+
+.footer__logo-image img {
+    vertical-align: middle;
+}
+
+.footer__logo-promo {
+    margin-bottom: 10px;
+    max-width: 125px;
+    font-size: 12px;
+
+    @include breakpoint(md) {
+        margin-top: 9px;
+    }
+}
+
+.footer__nav {
+
+    @include breakpoint(lg) {
+        display: flex;
+        column-gap: 90px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 170px;
+    }
+}
+
+.footer__contacts {
+    padding: 22px 0 47px;
+
+    @include breakpoint(md) {
+        padding: 0 0 44px;
+        display: flex;
+        column-gap: 40px;
+    }
+
+    @include breakpoint(lg) {
+        flex-direction: column;
+        flex-basis: calc((100% - 70px) / 3);
+        flex-shrink: 0;
+        row-gap: 27px;
+    }
+
+    @include breakpoint(xl) {
+        flex-basis: calc((100% - 245px) / 3);
+    }
+}
+
+.footer__contact {
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: calc((100% - 90px) / 2);
+    }
+
+    @include breakpoint(lg) {
+        width: auto;
+    }
+}
+
+.footer__contacts-label {
+    margin: 15px 0;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        margin: 0 0 15px;
+    }
+}
+
+.footer__contacts-phone {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    transition: all 0.5s ease;
+}
+
+.footer__contacts-phone:hover {
+    color: #b1b1b1;
+}
+
+.footer__contacts-phone::before {
+    content: '\f095';
+    background: #202020;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-family: $icon;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.footer__contacts-phone:hover::before {
+    color: #fff;
+}
+
+.footer__menu {
+    padding-bottom: 10px;
+
+    @include breakpoint(md) {
+        max-height: 260px;
+        overflow: hidden;
+    }
+
+    @include breakpoint(lg) {
+        padding-bottom: 20px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 452px;
+    }
+}
+
+.footer__menu ul {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 40px;
+    }
+
+    @include breakpoint(lg) {
+        justify-content: space-between;
+    }
+}
+
+.footer__menu-item {
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+        margin-bottom: 30px;
+        width: calc((100% - 90px) / 2);
+    }
+
+    @include breakpoint(lg) {
+        flex-basis : calc((100% - 86px) / 2);
+    }
+
+    @include breakpoint(xl) {
+        flex-basis : calc((100% - 120px) / 2);
+    }
+}
+
+.footer__menu-item:nth-child(odd) {
+    order: 0;
+
+    @include breakpoint(md) {
+        order: unset;
+    }
+}
+
+.footer__menu-item:nth-child(even) {
+    order: 1;
+
+    @include breakpoint(md) {
+        order: unset;
+    }
+}
+
+.footer__menu-link {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    transition: all 0.5s ease;
+}
+
+.footer__menu-link:hover {
+    color: #b1b1b1;
+}
+
+.footer__bottom {
+    margin-top: 30px;
+
+    @include breakpoint(md) {
+        margin-top: 28px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__copyright {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #A7A7A7;
+
+    @include breakpoint(md) {
+        max-width: 500px;
+    }
+}
+
+.footer__dev {
+    margin-top: 42px;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
+}
+
+.footer__dev span {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.footer__dev a {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}

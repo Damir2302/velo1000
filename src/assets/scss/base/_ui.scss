@@ -270,4 +270,16 @@ h3 {
 
 .page-title {
     margin-top: 40px;
+
+    @include breakpoint(md) {
+        margin-top: 50px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 60px;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background: $red!important;
 }
