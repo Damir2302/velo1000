@@ -191,7 +191,7 @@
 
     @include breakpoint(md) {
         content: "";
-        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%);
         position: absolute;
         top: 0;
         left: 0;
@@ -217,24 +217,31 @@
     }
 }
 
+.brands__wrapper {
+    align-items: center;
+}
+
 .brand__slide {
     margin-right: 20px;
     flex-basis: calc(25% + 7.5px);
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    height: 38px;
+    justify-content: center;
     text-align: center;
 
     @include breakpoint(md) {
         margin: 0;
-        justify-content: center;
         flex-basis: calc(25% - 19px);
         height: 80px;
     }
 
     @include breakpoint(lg) {
         flex-basis: calc(20% - 37.5px);
+    }
+
+    @include breakpoint(xl) {
+        flex-basis: 167px;
     }
 }
 
@@ -268,5 +275,58 @@
 
     @include breakpoint(lg) {
         margin: 42px auto 0;
+    }
+}
+
+.swiper-navigation {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+}
+
+.brand__button {
+
+    @include breakpoint(lg) {
+        color: $black;
+    }
+}
+
+.brand__button::after {
+
+    @include breakpoint(lg) {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+.brand__button--prev {
+
+    @include breakpoint(lg) {
+        left: 40px;
+    }
+
+    @include breakpoint(xl) {
+        left: 90px;
+    }
+
+    @include breakpoint(hd) {
+        left: 160px;
+    }
+}
+
+.brand__button--next {
+
+    @include breakpoint(lg) {
+        right: 40px;
+    }
+
+    @include breakpoint(xl) {
+        right: 90px;
+    }
+
+    @include breakpoint(hd) {
+        right: 160px;
     }
 }

@@ -14,6 +14,13 @@ $(document).ready(function() {
         breakpoints: {
           744: {
             centeredSlides: true,
+          },
+
+          1024: {
+            navigation: {
+              nextEl: '.brands__slider .swiper-button-next',
+              prevEl: '.brands__slider .swiper-button-prev',
+            },
           }
         }
     });
