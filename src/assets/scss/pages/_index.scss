@@ -2,6 +2,22 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
+
+    @include breakpoint(md) {
+        background-position: left;
+    }
+}
+
+.banner .container {
+
+    @include breakpointMax(lg) {
+        padding: 0;
+        padding-left: 30px;
+    }
+
+    @include breakpointMax(md) {
+        padding: 0 30px;
+    }
 }
 
 .banner::before {
@@ -20,7 +36,32 @@
     display: flex;
 
     @include breakpoint(md) {
-        padding: 45px 0 100px;
+        padding: 45px 0 125px;
+        align-items: center;
+        column-gap: 30px;
+        min-height: 323px;
+        box-sizing: content-box;
+    }
+
+    @include breakpoint(xl) {
+        padding: 72px 0 107px;
+        column-gap: 60px;
+        min-height: 419px;
+    }
+}
+
+.banner__block {
+
+    @include breakpoint(md) {
+        flex-basis: calc(((100% - 45px) / 12) * 7);
+    }
+
+    @include breakpoint(lg) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include breakpoint(xl) {
+        flex-basis: calc((100% - 140px) / 2);
     }
 }
 
@@ -35,6 +76,14 @@
 
     @include breakpoint(md) {
         text-align: left;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 30px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 35px;
     }
 }
 
@@ -58,6 +107,11 @@
 
     @include breakpoint(md) {
         margin: 40px 0 0;
+        box-sizing: border-box;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 50px
     }
 }
 
@@ -65,7 +119,34 @@
     display: none;
 
     @include breakpoint(md) {
+        position: absolute;
+        left: calc(50% + 60px);
         display: block;
+        width: 515px;
+        height: 323px;
+    }
+
+    @include breakpoint(lg) {
+        position: unset;
+        flex-basis: calc((100% - 30px) / 2);
+        min-height: 287px;
+    }
+
+    @include breakpoint(xl) {
+        flex-basis: calc((100% + 30px) / 2);
+        height: 100%;
+    }
+}
+
+.banner__image img {
+
+    @include breakpoint(md) {
+        height: 100%;
+    }
+
+    @include breakpoint(lg) {
+        width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -74,6 +155,118 @@
 
     @include breakpoint(md) {
         left: unset!important;
+        bottom: 50px!important;
         width: auto!important;
+    }
+
+    @include breakpoint(xl) {
+        bottom: 70px!important;
+    }
+}
+
+.brands-section {
+    padding: 20px 0;
+
+    @include breakpoint(md) {
+        padding: 30px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 40px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 60px 0;
+    }
+}
+
+.brands__slider {
+
+    @include breakpointMax(md) {
+        padding-left: 20px;
+    }
+}
+
+.brands__slider::before {
+
+    @include breakpoint(md) {
+        content: "";
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 15%;
+        height: 100%;
+        z-index: 2;
+    }
+}
+
+.brands__slider::after {
+
+    @include breakpoint(md) {
+        content: "";
+        background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 15%;
+        height: 100%;
+        z-index: 2;
+    }
+}
+
+.brand__slide {
+    margin-right: 20px;
+    flex-basis: calc(25% + 7.5px);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin: 0;
+        justify-content: center;
+        flex-basis: calc(25% - 19px);
+        height: 80px;
+    }
+
+    @include breakpoint(lg) {
+        flex-basis: calc(20% - 37.5px);
+    }
+}
+
+.brand__image {
+    padding: 5px;
+}
+
+.brand__image img {
+    vertical-align: middle;
+}
+
+.brands__button {
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 16px;
+    height: 36px;
+    max-width: 116px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin: 24px auto 0;
+        padding: 14px 30px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 19px;
+        height: 47px;
+        max-width: 148px;
+    }
+
+    @include breakpoint(lg) {
+        margin: 42px auto 0;
     }
 }
