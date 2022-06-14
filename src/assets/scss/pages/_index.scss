@@ -181,6 +181,14 @@
     }
 }
 
+.brands-section .button-style {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+}
+
 .brands__slider {
 
     @include breakpointMax(md) {
@@ -328,11 +336,27 @@
     }
 
     @include breakpoint(xl) {
-        padding: 60px 100px;
+        padding: 60px 0 100px;
     }
 }
 
-.popular__title {
+.popular-section .button-style {
+    margin-top: 30px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 50px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 60px;
+    }
+}
+
+.catalog__title {
     margin-bottom: 30px;
 
     @include breakpoint(md) {
@@ -348,7 +372,7 @@
     }
 }
 
-.popular {
+.catalog {
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
@@ -365,7 +389,7 @@
     }
 }
 
-.popular__block {
+.catalog__block {
     padding-bottom: 18px;
     background: #F7F7F7;
     display: flex;
@@ -374,53 +398,98 @@
     height: calc((50vw - 30px) * 1.27);
     border-radius: 15px;
     overflow: hidden;
-    box-sizing: content-box;
+
+    @include breakpoint(md) {
+        padding-bottom: 30px;
+        height: calc((50vw - 40px) * 1.09);
+    }
 
     @include breakpoint(lg) {
         width: calc((100% - 60px) / 3);
+        height: calc(((100vw - 140px) / 3) * 1.23);
     }
 
     @include breakpoint(xl) {
-        width: calc((100% - 80px) / 3);
+        padding-bottom: 40px;
+        width: 373px;
+        height: 460px;
     }
 }
 
-.popular__image {
-    flex-basis: 100%;
+.catalog__image {
+    width: 100%;
+    height: calc((50vw - 30px) / 1.26);
+
+    @include breakpoint(md) {
+        height: calc((50vw - 40px) / 1.23);
+    }
+
+    @include breakpoint(lg) {
+        height: calc(((100vw - 140px) / 3) / 1.09);
+    }
+
+    @include breakpoint(xl) {
+        height: 348px;
+    }
 }
 
-.popular__desc {
+.catalog__image img {
+    height: 100%;
+}
+
+.catalog__desc {
     margin-top: auto;
-    padding: 10px 10px 0;
+    padding: 0 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     flex-shrink: 0;
+
+    @include breakpoint(md) {
+        padding: 0 20px;
+    }
 }
 
-.popular__label {
-    max-width: 80px;
+.catalog__label {
+    max-width: 90px;
     font-weight: 700;
     font-size: 10px;
     line-height: 14px;
     color: $black;
+    text-align: left;
     text-transform: uppercase;
+    @include textLimit(3);
+
+    @include breakpoint(md) {
+        max-width: 194px;
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 
-.popular-arrow-icon {
+.catalog-arrow-icon {
     background: $red;
     display: flex;
     width: 12px;
     height: 12px;
     border-radius: 25px;
+
+    @include breakpoint(md) {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.popular-arrow-icon::after {
+.catalog-arrow-icon::after {
     content: "\e0fc";
     font-family: $icon;
     font-weight: 900;
     font-size: 12px;
     line-height: 1;
+
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
 }
 
 .materials-section {
@@ -463,6 +532,17 @@
         display: flex;
         flex-wrap: wrap;
         column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    @include breakpoint(lg) {
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 40px;
+        row-gap: 40px;
     }
 }
 
@@ -479,19 +559,25 @@
     overflow: hidden;
 
     @include breakpoint(md) {
-        width: calc(50% - 80px);
-        height: calc((100vw - 80px) / 1.031);
+        margin: 0;
+        padding: 0 20px 30px;
+        width: calc(50% - 10px);
+        height: calc(50vw - 40px);
     }
 }
 
 .materials__block::before {
     content: '';
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    background: linear-gradient(180deg, rgba(25, 6, 4, 0.0807121) 44.26%, #190604 100%);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
+    @include breakpoint(xl) {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    }
 }
 
 .materials__wrap {

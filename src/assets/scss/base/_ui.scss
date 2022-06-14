@@ -138,7 +138,6 @@ i {
 }
 
 .button-style--transparent_black {
-    margin-top: 20px;
     padding: 10px 20px;
     background: transparent;
     display: inline-block;
@@ -150,15 +149,10 @@ i {
     border: 1px solid $black;
 
     @include breakpoint(md) {
-        margin-top: 24px;
         padding: 14px 30px;
         height: 47px;
         font-size: 14px;
         line-height: 19px;
-    }
-
-    @include breakpoint(lg) {
-        margin-top: 42px;
     }
 }
 
