@@ -17,6 +17,7 @@ $(document).ready(function() {
           },
 
           1024: {
+
             navigation: {
               nextEl: '.brands__slider .swiper-button-next',
               prevEl: '.brands__slider .swiper-button-prev',

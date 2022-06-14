@@ -8,6 +8,7 @@ block main
 
     .main-page
 
+        // Banner section
         section.banner-section
 
             .swiper.banner__slider
@@ -54,7 +55,7 @@ block main
                     .container
                         .swiper-pagination.banner__pagination
 
-
+        // Brands section
         section.brands-section
 
             .swiper.brands__slider
@@ -105,9 +106,116 @@ block main
                         .brand__image
                             img(src="assets/images/brand-11.png", alt="img")
 
+
                 .swiper-navigation
                     .swiper-button-prev.brand__button.brand__button--prev
                     .swiper-button-next.brand__button.brand__button--next
 
 
-            a.brands__button.button-style.button-style--transparent_black(href="#") Все бренды
+            a.button-style.button-style--transparent_black(href="#") Все бренды
+
+        // Popular section
+        section.popular-section
+
+            .container
+
+                h2.popular__title Популярные категории
+
+                .popular
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-1.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-2.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-3.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-4.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-5.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-6.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-7.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-8.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                    a.popular__block(href="#")
+                        .popular__image
+                            img(src="assets/images/pop-9.png", alt="img")
+                        .popular__desc
+                            p.popular__label ИНСТРУМЕНТЫ
+                            span.popular-arrow-icon
+
+                a.button-style.button-style--transparent_black(href="#") Все категории
+
+        // Materials section
+        section.materials-section
+
+            .container
+
+                h2.materials__title Полезные материалы
+
+                .materials
+
+                    a.materials__block(href="#" style="background-image: url('assets/images/material-1.png')")
+                        .materials__wrap
+                            h4.materials__label Название полезной статьи Классификация велосипедов по видам
+                            p.materials__text Вдоволь откатавшись на велосипеде летом, каждый владелец своего "железного коня" задумывается о его хранении в зимний период.
+
+                    a.materials__block(href="#" style="background-image: url('assets/images/material-2.png')")
+                        .materials__wrap
+                            h4.materials__label Классификация велосипедов по видам
+                            p.materials__text Дорожные велосипеды предназначены для удобной езды по городу, где скорость менее важна, чем удобство
+
+                    a.materials__block(href="#" style="background-image: url('assets/images/material-3.png')")
+                        .materials__wrap
+                            h4.materials__label Возрождение велосипеда после зимней консервации
+                            p.materials__text Когда снег уже растаял, а солнце стало приятно припекать, уже хочется покататься на велосипеде
+
+                    a.materials__block(href="#" style="background-image: url('assets/images/material-4.png')")
+                        .materials__wrap
+                            h4.materials__label Показатели яркости велосипедных фар
+                            p.materials__text Световой поток – это часть мощности излучения, которая воспринимается человеческим глазом.
+
+                a.button-style.button-style--transparent_black(href="#") Читать все
+

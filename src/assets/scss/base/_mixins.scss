@@ -54,3 +54,12 @@ $hd: 1440px;
 @mixin breakpointMaxCustom($point) {
     @media (max-width: $point - 1px) { @content ; }
 }
+
+@mixin textLimit($val) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $val;
+    line-clamp: $val;
+    -webkit-box-orient: vertical;
+}
