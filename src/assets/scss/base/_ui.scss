@@ -296,3 +296,28 @@ h3 {
 .swiper-pagination-bullet-active {
     background: $red!important;
 }
+
+.item-arrow-icon {
+    background: $red;
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 25px;
+
+    @include breakpoint(md) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.item-arrow-icon::after {
+    content: "\e0fc";
+    font-family: $icon;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 1;
+
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
+}

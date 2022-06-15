@@ -128,63 +128,63 @@ block main
                             img(src="assets/images/pop-1.png", alt="img")
                         .catalog__desc
                             p.catalog__label ИНСТРУМЕНТЫ
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-2.png", alt="img")
                         .catalog__desc
                             p.catalog__label ГРИПСЫ
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-3.png", alt="img")
                         .catalog__desc
                             p.catalog__label ПЕДАЛИ
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-4.png", alt="img")
                         .catalog__desc
                             p.catalog__label ВИЛКИ
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-5.png", alt="img")
                         .catalog__desc
                             p.catalog__label ПОКРЫШКИ
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-6.png", alt="img")
                         .catalog__desc
                             p.catalog__label Цепи
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-7.png", alt="img")
                         .catalog__desc
                             p.catalog__label Тормозные колодки дисковые
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-8.png", alt="img")
                         .catalog__desc
                             p.catalog__label Тормозные колодки ободные
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                     a.catalog__block(href="#")
                         .catalog__image
                             img(src="assets/images/pop-9.png", alt="img")
                         .catalog__desc
                             p.catalog__label Кассеты
-                            span.catalog-arrow-icon
+                            span.item-arrow-icon
 
                 a.button-style.button-style--transparent_black(href="#") Все категории
 
@@ -219,3 +219,144 @@ block main
 
                 a.button-style.button-style--transparent_black(href="#") Читать все
 
+        // News section
+        section.news-section
+
+            .container
+
+                h2.news__title Новости
+
+                .news
+
+                    .news__block
+                        .news__head
+                            .news__date 21.02.2022
+                            span.item-arrow-icon
+                        h4.news__label Режим работы 23 февраля и 8 марта 2022
+                        a.news__link(href="#")  Читать новость
+
+                    .news__block
+                        .news__head
+                            .news__date 21.02.2022
+                            span.item-arrow-icon
+                        h4.news__label Режим работы в&nbsp;новогодние праздники
+                        a.news__link(href="#")  Читать новость
+
+                    .news__block
+                        .news__head
+                            .news__date 21.02.2022
+                            span.item-arrow-icon
+                        h4.news__label Приглашаем на МТБ-гонку RVO RACE, Москва, 8&nbsp;августа, 12:00
+                        a.news__link(href="#")  Читать новость
+
+                a.button-style.button-style--transparent_black(href="#") Читать все новости
+
+
+        // Promo section
+        section.promo-section
+
+            .promo
+
+                .container
+
+                    .promo__banner
+
+                        .promo__wrap
+
+                            p.promo__label Совершите покупку на сумму <span>от&nbsp;5&nbsp;000&nbsp;рублей</span> и&nbsp;получите скидку на следующую покупку
+
+                            ul.promo__list
+                                li.promo__list-item от 5 000 руб. – 3%
+                                li.promo__list-item от 15 000 руб. – 5%
+                                li.promo__list-item от 25 000 руб. – 8%
+
+                        .promo__image
+                            img(src="assets/images/promo-banner.png", alt="img")
+
+                    .promo__notify
+                        p * Клубная карта выдается по предъявленным чекам.
+                        p * Скидка не действует на товары, участвующие в акции или распродаже.
+                        p * Скидка не действует при безналичной оплате.
+
+
+            .promo__line
+
+                .container
+
+                    .promo__items
+
+                        .promo__item
+                            p Огромный выбор велозапчастей
+
+                        .promo__item
+                            p Программа лояльности
+
+                        .promo__item
+                            p Два магазина в&nbsp;Москве
+
+                        .promo__item
+                            p Доставка по&nbsp;всей&nbsp;России
+
+
+        // Shops section
+        section.shops-section
+
+            h2.shops__title Магазины в москве
+
+            .shops__wrapper
+
+                .shops__addresses
+                    // Обращаемся к ID чтобы получить нужный цвет логотипа
+
+                        use(xlink:href="assets/images/moscow-metro.svg#ОБРАЗЕЦ"), где "ОБРАЗЕЦ" - это цвет нашего логотипа
+
+                        Пишем только маленькими буквами!
+
+                        red: красный
+                        green: зеленый
+                        blue: синий
+                        light-blue: голубой
+                        brown: коричневый
+                        orange: оранжевый
+                        purple: фиолетовый
+                        yellow: желтый
+                        grey: серый
+                        lime: салатовый
+                        teal: бирюзовый
+                        blue-grey: серо-голубой
+                        pink: розовый
+
+                    .shops__block
+                        .shops__metro
+                            .shops__metro-logo
+                                svg
+                                    use(xlink:href="assets/images/moscow-metro.svg#red")
+                            p.shops__metro-name Сокольники
+                        .shops__address
+                            p Сокольническая пл., д.4. "Галерея спорта" Павильоны: № 18, 44, 77, 101
+                        .shops__works
+                            p Пн-сб: с 10 до 20 ч Воскресенье: с 10 до 19 ч
+
+                    .shops__block
+                        .shops__metro
+                            .shops__metro-logo
+                                svg
+                                    use(xlink:href="assets/images/moscow-metro.svg#green")
+                            p.shops__metro-name Беломорская
+                        .shops__address
+                            p ул.Смольная, д.63 "Б".ТД "Экстрим" Павильон: № Б-6.
+                        .shops__works
+                            p Ежедневно, с 10 до 20:30 ч
+
+                    .shops__block
+                        .shops__metro
+                            .shops__metro-logo
+                                svg
+                                    use(xlink:href="assets/images/moscow-metro.svg#green")
+                            p.shops__metro-name Водный Стадион
+                        .shops__address
+                            p Ленинградское шоссе, д.52 Магазин расположен между магазином "Пятёрочка" и "Винлаб".
+                        .shops__works
+                            p Ежедневно, с 10 до 20 ч
+
+                #map(style="width: 100%; height: 275px")
