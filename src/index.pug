@@ -301,62 +301,69 @@ block main
         // Shops section
         section.shops-section
 
-            h2.shops__title Магазины в москве
+            .shops__title
+                .container
+                    h2 Магазины в москве
 
             .shops__wrapper
 
                 .shops__addresses
-                    // Обращаемся к ID чтобы получить нужный цвет логотипа
 
-                        use(xlink:href="assets/images/moscow-metro.svg#ОБРАЗЕЦ"), где "ОБРАЗЕЦ" - это цвет нашего логотипа
+                    .container
 
-                        Пишем только маленькими буквами!
+                        .shops__addresses-inner
 
-                        red: красный
-                        green: зеленый
-                        blue: синий
-                        light-blue: голубой
-                        brown: коричневый
-                        orange: оранжевый
-                        purple: фиолетовый
-                        yellow: желтый
-                        grey: серый
-                        lime: салатовый
-                        teal: бирюзовый
-                        blue-grey: серо-голубой
-                        pink: розовый
+                            // Обращаемся к ID чтобы получить нужный цвет логотипа
 
-                    .shops__block
-                        .shops__metro
-                            .shops__metro-logo
-                                svg
-                                    use(xlink:href="assets/images/moscow-metro.svg#red")
-                            p.shops__metro-name Сокольники
-                        .shops__address
-                            p Сокольническая пл., д.4. "Галерея спорта" Павильоны: № 18, 44, 77, 101
-                        .shops__works
-                            p Пн-сб: с 10 до 20 ч Воскресенье: с 10 до 19 ч
+                                use(xlink:href="assets/images/moscow-metro.svg#ОБРАЗЕЦ"), где "ОБРАЗЕЦ" - это цвет нашего логотипа
 
-                    .shops__block
-                        .shops__metro
-                            .shops__metro-logo
-                                svg
-                                    use(xlink:href="assets/images/moscow-metro.svg#green")
-                            p.shops__metro-name Беломорская
-                        .shops__address
-                            p ул.Смольная, д.63 "Б".ТД "Экстрим" Павильон: № Б-6.
-                        .shops__works
-                            p Ежедневно, с 10 до 20:30 ч
+                                Пишем только маленькими буквами!
 
-                    .shops__block
-                        .shops__metro
-                            .shops__metro-logo
-                                svg
-                                    use(xlink:href="assets/images/moscow-metro.svg#green")
-                            p.shops__metro-name Водный Стадион
-                        .shops__address
-                            p Ленинградское шоссе, д.52 Магазин расположен между магазином "Пятёрочка" и "Винлаб".
-                        .shops__works
-                            p Ежедневно, с 10 до 20 ч
+                                red: красный
+                                green: зеленый
+                                blue: синий
+                                light-blue: голубой
+                                brown: коричневый
+                                orange: оранжевый
+                                purple: фиолетовый
+                                yellow: желтый
+                                grey: серый
+                                lime: салатовый
+                                teal: бирюзовый
+                                blue-grey: серо-голубой
+                                pink: розовый
 
-                #map(style="width: 100%; height: 275px")
+                            .shops__block
+                                .shops__metro
+                                    .shops__metro-logo(data-color="red" data-coords="55.789232, 37.677832")
+                                        svg
+                                            use(xlink:href="assets/images/moscow-metro.svg#red")
+                                    h4.shops__metro-name Сокольники
+                                .shops__address
+                                    p Сокольническая пл., д.4. "Галерея спорта" Павильоны:&nbsp;№18, 44, 77, 101
+                                .shops__works
+                                    p Пн-сб: с 10 до 20 ч Воскресенье:&nbsp;с&nbsp;10&nbsp;до&nbsp;19&nbsp;ч
+
+                            .shops__block
+                                .shops__metro
+                                    .shops__metro-logo(data-color="green" data-coords="55.869937, 37.469915")
+                                        svg
+                                            use(xlink:href="assets/images/moscow-metro.svg#green")
+                                    h4.shops__metro-name Беломорская
+                                .shops__address
+                                    p ул.Смольная, д.63 "Б". ТД&nbsp;"Экстрим" Павильон: № Б-6.
+                                .shops__works
+                                    p Ежедневно, с 10 до 20:30&nbsp;ч
+
+                            .shops__block
+                                .shops__metro
+                                    .shops__metro-logo(data-color="green" data-coords="55.836558, 37.484776")
+                                        svg
+                                            use(xlink:href="assets/images/moscow-metro.svg#green")
+                                    h4.shops__metro-name Водный Стадион
+                                .shops__address
+                                    p Ленинградское шоссе, д.52 Магазин&nbsp;расположен между магазином "Пятёрочка" и "Винлаб".
+                                .shops__works
+                                    p Ежедневно, с 10 до 20 ч
+
+                #map.yandex-map(style="width: 100%")

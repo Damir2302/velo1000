@@ -1,0 +1,58 @@
+.page-sales {
+    padding: 30px 0 60px;
+    color: $black;
+
+    @include breakpoint(md) {
+        padding: 40px 0 60px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 50px 0 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px 0 100px;
+    }
+}
+
+.page-sales .promo__banner {
+    padding: 0;
+    background: none;
+}
+
+.page-sales .promo__wrap  {
+    padding: 0;
+}
+
+.page-sales .promo__label span {
+    color: #fff;
+}
+
+.page-sales .promo__image {
+
+
+    @include breakpoint(md) {
+        right: 17px;
+        bottom: -17px;
+        width: calc(50% + 50px);
+    }
+
+    @include breakpoint(lg) {
+        top: 0;
+        right: 0;
+        bottom: unset;
+        text-align: right;
+    }
+
+    @include breakpoint(xl) {
+        width: calc(50% + 10px);
+        height: 302px;
+    }
+}
+
+.page-sales .promo__image img {
+
+    @include breakpoint(lg) {
+        height: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+---
+title: Velo1000 | Система скидок
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Система скидок', 'Система скидок')
+    // Breadcrumbs::End
+
+    .page-sales
+
+        .promo
+
+            .container
+
+                .promo__banner
+
+                    .promo__wrap
+
+                        p.promo__label Совершите покупку на сумму <span>от&nbsp;5&nbsp;000&nbsp;рублей</span> и&nbsp;получите скидку на следующую покупку
+
+                        ul.promo__list
+                            li.promo__list-item от 5 000 руб. – 3%
+                            li.promo__list-item от 15 000 руб. – 5%
+                            li.promo__list-item от 25 000 руб. – 8%
+
+                    .promo__image
+                        img(src="assets/images/promo-banner.png", alt="img")
+
+                .promo__notify
+                    p * Клубная карта выдается по предъявленным чекам.
+                    p * Скидка не действует на товары, участвующие в акции или распродаже.
+                    p * Скидка не действует при безналичной оплате.

@@ -46,7 +46,7 @@ main {
     min-height: calc(max(calc(100vh - 614px), 650px));
 
     @include breakpoint(md) {
-        min-height: calc(max(calc(100vh - 614px), 600px));
+        min-height: calc(max(calc(100vh - 614px), 570px));
     }
 }
 
