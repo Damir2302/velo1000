@@ -18,10 +18,85 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 20px;
+
+    @include breakpoint(lg) {
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 40px;
+        row-gap: 40px;
+    }
 }
 
 .brands__block {
+    padding: 15px 15px 13px;
     background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
     width: calc(50% - 10px);
+    height: calc(((100vw - 60px) / 2) / 1.065);
+    min-height: 122px;
     border-radius: 15px;
+
+    @include breakpoint(md) {
+        padding: 10px 10px 6px;
+        width: calc(25% - 15px);
+        height: calc(((100vw - 120px) / 4) / 1.444);
+    }
+
+    @include breakpoint(lg) {
+        padding: 15px;
+        width: calc((100% / 6) - 25px);
+        height: calc(((100vw - 230px) / 6) / 1.065);
+    }
+
+    @include breakpoint(xl) {
+        width: 166px;
+        height: 116px;
+    }
+}
+
+.brands__label {
+    margin-top: auto;
+}
+
+.brands__label h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: $black;
+    text-transform: uppercase;
+}
+
+.brands__image {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 44px;
+    max-width: 100px;
+
+    @include breakpoint(md) {
+        margin-top: 8px;
+        height: 52px;
+        max-width: 90px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 6px;
+        height: 44px;
+        max-width: 100px;
+    }
+}
+
+.brands__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
