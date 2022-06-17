@@ -1,0 +1,76 @@
+---
+title: Velo1000 | Полезные материалы
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Полезные материалы', 'Полезные материалы')
+    // Breadcrumbs::End
+
+    .page-materials
+
+        .container
+
+            .materials
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-1.png')")
+                    .materials__wrap
+                        h4.materials__label Название полезной статьи Классификация велосипедов по видам
+                        p.materials__text Вдоволь откатавшись на велосипеде летом, каждый владелец своего "железного коня" задумывается о его хранении в зимний период.
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-2.png')")
+                    .materials__wrap
+                        h4.materials__label Классификация велосипедов по видам
+                        p.materials__text Дорожные велосипеды предназначены для удобной езды по городу, где скорость менее важна, чем удобство
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-3.png')")
+                    .materials__wrap
+                        h4.materials__label Возрождение велосипеда после зимней консервации
+                        p.materials__text Когда снег уже растаял, а солнце стало приятно припекать, уже хочется покататься на велосипеде
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-4.png')")
+                    .materials__wrap
+                        h4.materials__label Показатели яркости велосипедных фар
+                        p.materials__text Световой поток – это часть мощности излучения, которая воспринимается человеческим глазом.
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-1.png')")
+                    .materials__wrap
+                        h4.materials__label Название полезной статьи Классификация велосипедов по видам
+                        p.materials__text Вдоволь откатавшись на велосипеде летом, каждый владелец своего "железного коня" задумывается о его хранении в зимний период.
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-2.png')")
+                    .materials__wrap
+                        h4.materials__label Классификация велосипедов по видам
+                        p.materials__text Дорожные велосипеды предназначены для удобной езды по городу, где скорость менее важна, чем удобство
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-3.png')")
+                    .materials__wrap
+                        h4.materials__label Возрождение велосипеда после зимней консервации
+                        p.materials__text Когда снег уже растаял, а солнце стало приятно припекать, уже хочется покататься на велосипеде
+
+                a.materials__block(href="#" style="background-image: url('assets/images/material-4.png')")
+                    .materials__wrap
+                        h4.materials__label Показатели яркости велосипедных фар
+                        p.materials__text Световой поток – это часть мощности излучения, которая воспринимается человеческим глазом.
+
+            .pagination-container
+                a.button-style.button-style--red(href="#") Загрузить еще
+
+                // Pagination
+                .pagination
+
+                    a.pagination-item.pagination-arrow.pagination-arrow-left.disabled(href="javascript:void(0)")
+                        i.far.fa-chevron-left
+
+                    a.pagination-item.active(href="javascript:void(0)") 1
+                    a.pagination-item(href="javascript:void(0)") 2
+                    a.pagination-item(href="javascript:void(0)") 3
+                    span.pagination-item.pagination-dots ...
+                    a.pagination-item(href="javascript:void(0)") 10
+
+                    a.pagination-item.pagination-arrow.pagination-arrow-right(href="javascript:void(0)")
+                        i.far.fa-chevron-right

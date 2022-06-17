@@ -14,8 +14,13 @@ $black: #0E0E0E;
 
 @import 'components/breadcrumbs';
 @import 'components/popup-auth';
+@import 'components/pagination';
 
 @import 'pages/index';
 @import 'pages/forgot-password';
 @import 'pages/sales';
 @import 'pages/brands';
+@import 'pages/materials';
+@import 'pages/article-inner';
+@import 'pages/news';
+@import 'pages/contacts';

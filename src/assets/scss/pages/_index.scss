@@ -576,18 +576,6 @@
     }
 }
 
-.materials__block:first-child,
-.materials__block:last-child {
-
-    @include breakpoint(lg) {
-        width: calc(((100% - 15px) / 12) * 8);
-    }
-
-    @include breakpoint(xl) {
-        width: 787px;
-    }
-}
-
 .materials__block::before {
     content: '';
     background: linear-gradient(180deg, rgba(25, 6, 4, 0.0807121) 44.26%, #190604 100%);
@@ -601,6 +589,29 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
     }
 }
+
+.materials__block:nth-child(4n), .materials__block:nth-child(4n-3) {
+
+    @include breakpoint(lg) {
+        width: calc(((100% - 15px) / 12) * 8);
+    }
+
+    @include breakpoint(xl) {
+        width: 787px;
+    }
+}
+
+.materials__block:last-child {
+
+    @include breakpoint(lg) {
+        width: calc(((100% - 15px) / 12) * 8);
+    }
+
+    @include breakpoint(xl) {
+        width: 787px;
+    }
+}
+
 
 .materials__wrap {
     margin-top: auto;
@@ -692,15 +703,19 @@
 
     @include breakpoint(md) {
         display: flex;
+        flex-wrap: wrap;
         column-gap: 20px;
+        row-gap: 20px;
     }
 
     @include breakpoint(lg) {
         column-gap: 30px;
+        row-gap: 30px;
     }
 
     @include breakpoint(xl) {
         column-gap: 40px;
+        row-gap: 40px;
     }
 }
 
@@ -724,12 +739,13 @@
 
     @include breakpoint(lg) {
         padding: 20px;
-        width: calc((100% - 50px) / 3);
+        width: calc((100% - 60px) / 3);
         height: calc(((100vw - 135px) / 3) / 1.39);
     }
 
     @include breakpoint(xl) {
         padding: 30px 30px 33px;
+        width: calc((100% - 80px) / 3);
         height: 268px;
     }
 }

@@ -1,0 +1,44 @@
+.page-contacts {
+    padding: 40px 0 50px;
+    color: $black;
+}
+
+.page-contacts h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: $black;
+    text-transform: uppercase;
+}
+
+.page-contacts a {
+    display: inline;
+}
+
+.contacts__row {
+    margin-bottom: 50px;
+    max-width: 890px;
+}
+
+.contacts__row h4 {
+    margin-bottom: 20px;
+}
+
+.contacts__item .text-gray {
+    color: #686461;
+}
+
+.contacts__item .fa-icon::before {
+    margin-right: 7px;
+    font-family: $fa5;
+    font-weight: 900;
+    color: $red;
+}
+
+.contacts__item .fa-icon--phone::before {
+    content: '\e11b';
+}
+
+.contacts__item .fa-icon--clock::before {
+    content: '\f017';
+}

@@ -282,7 +282,7 @@ h3 {
 }
 
 .page-title {
-    margin-top: 40px;
+    margin-top: 20px;
 
     @include breakpoint(md) {
         margin-top: 50px;
@@ -320,4 +320,37 @@ h3 {
     @include breakpoint(md) {
         font-size: 20px;
     }
+}
+
+.attention-banner {
+    margin-bottom: 80px;
+    padding: 40px;
+    border: 1px solid #BF0F0F;
+    border-radius: 16px;
+}
+
+.attention-banner h4 {
+    margin-bottom: 24px;
+}
+
+.attention-banner ul {
+    padding-left: 20px;
+}
+
+.attention-banner ul li {
+    margin-bottom: 12px;
+    list-style-type: disc;
+}
+
+.attention-banner ul li:last-child {
+    margin: 0;
+}
+
+.attention-banner ul li::marker {
+    color: $red;
+}
+
+.attention-banner a {
+    display: inline;
+    color: $red;
 }

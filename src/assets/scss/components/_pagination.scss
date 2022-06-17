@@ -1,0 +1,51 @@
+.pagination-container {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+}
+
+.pagination {
+    display: none;
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        border-radius: 3px;
+    }
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 47px;
+    min-height: 47px;
+    max-width: 47px;
+    max-height: 47px;
+    font-size: 15px;
+    color: $black;
+    border: 1px solid #E7E7E7;
+    border-radius: 3px;
+}
+
+.pagination-item.active {
+    color: $red;
+    border: 1px solid $red;
+}
+
+.pagination-dots {
+    cursor: default;
+}
+
+.pagination-arrow.disabled {
+    color: #E7E7E7;
+    cursor: default;
+}
+
+.pagination-arrow i {
+    font-size: 13px;
+}

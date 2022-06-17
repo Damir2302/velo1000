@@ -1,0 +1,79 @@
+.page-article-inner {
+    color: $black;
+}
+
+.article__content {
+    padding: 45px 0 50px;
+}
+
+.article__content a {
+    display: inline;
+    color: $red;
+}
+
+.article__content img {
+    margin: 50px 0;
+}
+
+.article__bottom {
+    padding: 60px 0;
+    background: #F7F7F7;
+    color: #fff;
+
+    @include breakpoint(md) {
+        padding: 100px 0;
+    }
+}
+
+.article__bottom h2 {
+    margin-bottom: 50px;
+}
+
+.article__bottom .materials__block::before {
+    content: none;
+}
+
+.article__bottom .materials__block:first-child {
+
+    @include breakpoint(lg) {
+        width: calc(((100% - 15px) / 12) * 8);
+    }
+
+    @include breakpoint(xl) {
+        width: 787px;
+    }
+}
+
+.article__bottom .materials__block:last-child {
+
+    @include breakpoint(md) {
+        margin: 0;
+        padding: 0 20px 30px;
+        width: calc(50% - 10px);
+        height: calc(50vw - 40px);
+    }
+
+    @include breakpoint(lg) {
+        padding: 30px;
+        width: calc(((100% - 60px) / 12) * 4);
+        height: calc((((100vw - 135px) / 12) * 4) / 1.02);
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px;
+        width: 373px;
+        height: 366px;
+    }
+}
+
+.article__bottom .materials__label {
+    max-width: 290px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.article__bottom .materials__text {
+    max-width: 295px;
+}

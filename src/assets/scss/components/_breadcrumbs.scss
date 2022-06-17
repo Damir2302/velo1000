@@ -3,8 +3,12 @@
 }
 
 .breadcrumbs-wrapper {
-    display: flex;
-    align-items: center;
+    display: none;
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .breadcrumbs-item {
