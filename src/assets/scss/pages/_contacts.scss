@@ -1,6 +1,11 @@
 .page-contacts {
     padding: 40px 0 50px;
     color: $black;
+    font-size: 14px;
+
+    @include breakpoint(md) {
+        font-size: 16px;
+    }
 }
 
 .page-contacts h4 {
@@ -24,21 +29,44 @@
     margin-bottom: 20px;
 }
 
+.contacts__block {
+    margin-bottom: 12px;
+    display: flex;
+    column-gap: 7px;
+}
+
+.contacts__item {
+
+    @include breakpoint(md) {
+        display: flex;
+        column-gap: 5px;
+    }
+}
+
 .contacts__item .text-gray {
     color: #686461;
 }
 
-.contacts__item .fa-icon::before {
-    margin-right: 7px;
-    font-family: $fa5;
-    font-weight: 900;
+.contacts__item .text-red {
     color: $red;
 }
 
-.contacts__item .fa-icon--phone::before {
+.contacts__item--column {
+    margin-bottom: 16px;
+    display: block;
+}
+
+.contacts__block.fa-icon::before {
+    font-family: $fa5;
+    font-weight: 900;
+    font-size: 15px;
+    color: $red;
+}
+
+.contacts__block.fa-icon--phone::before {
     content: '\e11b';
 }
 
-.contacts__item .fa-icon--clock::before {
+.contacts__block.fa-icon--clock::before {
     content: '\f017';
 }
