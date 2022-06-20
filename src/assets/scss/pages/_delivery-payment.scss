@@ -1,0 +1,133 @@
+.page-payment {
+    padding: 20px 0 60px;
+    color: $black;
+
+    @include breakpoint(md) {
+        padding: 28px 0 48px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 28px 0 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px 0 100px;
+    }
+}
+
+.page-payment .limiter {
+    max-width: 890px;
+}
+
+.page-payment b {
+    font-weight: 700;
+}
+
+.page-payment p {
+    max-width: 786px;
+}
+
+.page-payment .text-gray {
+    margin: 20px 0 30px;
+    color: #686461;
+
+    @include breakpoint(md) {
+        margin: 30px 0 48px;
+    }
+}
+
+.page-payment .attention-banner {
+    margin: 40px 0 0;
+}
+
+.page-payment .table-text {
+
+    @include breakpoint(lg) {
+        margin-top: 30px;
+    }
+}
+
+.page-payment .table-text:first-child {
+
+    @include breakpointMax(lg) {
+        margin-top: 37px;
+    }
+}
+
+.page-payment .table-text:last-child {
+    margin-top: 16px;
+
+    @include breakpoint(md) {
+        margin-top: 30px;
+    }
+}
+
+.table-container .table-text:last-child .table-text-row {
+    flex-direction: column;
+    row-gap: 16px;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+}
+
+.table-container .table-text:last-child p {
+    flex-basis: unset;
+    text-align: left;
+}
+
+.table-container .table-text:last-child .table-text-row:nth-child(2) p:first-child {
+
+    @include breakpoint(md) {
+        max-width: 500px;
+    }
+}
+
+.table-container .table-text:last-child .table-text-row:last-child p:first-child {
+
+    @include breakpoint(md) {
+        max-width: 420px;
+    }
+}
+
+.table-container .table-text:last-child .table-text-row:last-child p:last-child {
+
+    @include breakpoint(md) {
+        text-align: right;
+    }
+}
+
+.page-payment .button-style {
+    margin-bottom: 40px;
+    padding: 14px 10px;
+    display: inline-block;
+    font-size: 14px;
+
+    @include breakpoint(md) {
+        padding: 14px 30px;
+    }
+}
+
+.payment-notify {
+    padding: 25px 20px;
+    background: #F7F7F7;
+    display: flex;
+    column-gap: 12px;
+    max-width: 400px;
+    border-radius: 16px;
+
+    @include breakpoint(md) {
+        column-gap: 34px;
+        max-width: 482px;
+    }
+}
+
+.payment-icon {
+    margin-top: 5px;
+    flex-basis: 40px;
+    flex-shrink: 0;
+
+    @include breakpoint(md) {
+        flex-basis: 68px;
+    }
+}

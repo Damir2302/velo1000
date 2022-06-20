@@ -324,9 +324,14 @@ h3 {
 
 .attention-banner {
     margin-bottom: 80px;
-    padding: 40px;
+    padding: 30px 20px;
     border: 1px solid #BF0F0F;
     border-radius: 16px;
+    color: $black;
+
+    @include breakpoint(lg) {
+        padding: 40px;
+    }
 }
 
 .attention-banner h4 {
@@ -353,4 +358,43 @@ h3 {
 .attention-banner a {
     display: inline;
     color: $red;
+}
+
+.table-text {
+    background: #F7F7F7;
+    border-radius: 16px;
+}
+
+.table-text-row {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: $black;
+
+    @include breakpoint(md) {
+        padding: 31px 38px;
+    }
+}
+
+.table-text-row p {
+    flex-basis: 60px;
+    flex-grow: 1;
+    max-width: 620px;
+}
+
+.table-text-row p:last-child {
+    flex-grow: 0;
+}
+
+.table-text-row ~ .table-text-row {
+    position: relative;
+}
+
+.table-text-row ~ .table-text-row::before {
+    content: '';
+    background: #E7E7E7;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 76px);
+    height: 1px;
 }

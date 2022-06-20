@@ -1,11 +1,121 @@
 .page-delivery {
-    padding: 40px 0 100px;
+    padding: 20px 0 60px;
+    color: $black;
+
+    @include breakpoint(md) {
+        padding: 28px 0 48px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 28px 0 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 40px 0 100px;
+    }
+}
+
+.page-delivery .limiter {
+    max-width: 890px;
 }
 
 .page-delivery b {
     font-weight: 700;
 }
 
+.page-delivery p {
+    max-width: 786px;
+}
+
 .page-delivery .red-text {
+    max-width: 620px;
     color: $red;
+}
+
+.page-delivery .table-text {
+    margin: 22px 0 40px;
+}
+
+.page-delivery .box-row {
+    margin: 30px 0;
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.page-delivery .box-item {
+    margin-bottom: 12px;
+    padding: 24px 20px;
+    background: #F7F7F7;
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+    border-radius: 16px;
+
+    @include breakpoint(md) {
+        width: calc((100% - 28px) / 3);
+    }
+
+    @include breakpoint(lg) {
+        padding: 25px 30px;
+        width: calc((100% - 40px) / 3);
+    }
+}
+
+.page-delivery .box-img {
+    flex-shrink: 0;
+    flex-basis: 50px;
+}
+
+.page-delivery .box-item p {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.page-delivery .button-style {
+    padding: 14px 9px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+
+    @include breakpoint(xl) {
+        margin: 20px 0;
+    }
+}
+
+.page-delivery .attention-banner {
+    margin: 54px 0;
+}
+
+.page-delivery .attention-banner a {
+    margin-top: 18px;
+    position: relative;
+    left: -20px;
+    display: inline-block;
+    font-weight: 600;
+
+    @include breakpoint(lg) {
+        margin: 0;
+        position: static;
+    }
+}
+
+.page-delivery .attention-banner a::after {
+    content: '\e0fc';
+    margin-left: 8px;
+    font-family: $fa5;
+    font-weight: 900;
+    font-size: 11px;
+    color: $red;
+}
+
+.page-delivery .custom-style-btn {
+    margin: 35px 0 65px;
+    display: block;
+    max-width: 280px;
+    text-align: center;
 }
