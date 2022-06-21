@@ -334,28 +334,28 @@ h3 {
     }
 }
 
-.attention-banner h4 {
-    margin-bottom: 24px;
+main .attention-banner h4 {
+    margin: 0 0 24px;
 }
 
-.attention-banner ul {
+main .attention-banner ul {
     padding-left: 20px;
 }
 
-.attention-banner ul li {
+main .attention-banner ul li {
     margin-bottom: 12px;
     list-style-type: disc;
 }
 
-.attention-banner ul li:last-child {
+main .attention-banner ul li:last-child {
     margin: 0;
 }
 
-.attention-banner ul li::marker {
+main .attention-banner ul li::marker {
     color: $red;
 }
 
-.attention-banner a {
+main .attention-banner a {
     display: inline;
     color: $red;
 }

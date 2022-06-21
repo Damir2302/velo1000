@@ -1,0 +1,148 @@
+.page-personal.page-delivery.page-payment {
+    padding-top: 0;
+}
+
+.page-personal {
+    padding-bottom :60px;
+    color: $black;
+
+    @include breakpoint(lg) {
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 100px;
+    }
+}
+
+.page-personal h3 {
+    margin:30px 0 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        margin: 40px 0 30px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 60px 0 20px;
+    }
+}
+
+.page-personal h4 {
+    margin: 30px 0 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        margin: 40px 0 20px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 50px 0 20px;
+    }
+}
+
+.personal__container {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 25px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 40px;
+    }
+}
+
+.personal__block {
+
+    @include breakpoint(lg) {
+        width: 100%;
+    }
+}
+
+.personal__aside {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: block;
+        min-width: 270px;
+        max-width: 270px;
+        border: 1px solid #E7E7E7;
+        border-radius: 15px;
+    }
+}
+
+.aside__item ~ .aside__item {
+
+    @include breakpoint(lg) {
+        border-top: 1px solid #E7E7E7;
+    }
+}
+
+.aside__item.active {
+
+    @include breakpoint(lg) {
+        background: $red;
+    }
+}
+
+.aside__item-link {
+
+    @include breakpoint(lg) {
+        padding: 20px 30px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $black;
+    }
+}
+
+.aside__item.active .aside__item-link {
+
+    @include breakpoint(lg) {
+        color: #fff;
+    }
+}
+
+//////////////////////////
+/// PAGE DELIVERY
+//////////////////////////
+.page-personal .attention-banner {
+    margin: 30px 0;
+}
+
+.page-personal .table-text:first-child {
+    margin: 37px 0 16px;
+}
+
+.page-personal .payment-notify {
+    margin-bottom: 60px;
+
+    @include breakpoint(md) {
+        margin-bottom: 100px;
+    }
+}
+
+.section-delivery .attention-banner {
+
+    @include breakpoint(md) {
+        margin: 2px 0 52px;
+    }
+}
+
+.section-delivery .custom-style-btn {
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
