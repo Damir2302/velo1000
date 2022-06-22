@@ -1,0 +1,75 @@
+---
+title: Velo1000 | Личный кабинет - Вопрос и ответ
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Личный кабинет', 'Личный кабинет', 'Вопрос и ответ')
+    // Breadcrumbs::End
+
+    .page-personal
+
+        .container
+
+            h3 Вопрос и ответ
+
+            .personal__container
+
+                .personal__block
+
+                   .faq
+
+                        .faq__block
+                            .faq__question Где можно посмотреть товар в живую?
+                            .faq__answer Нет, мы доставляем только по территории Российской Федерации
+
+                        .faq__block
+                            .faq__question Вы доставляете за границу?
+                            .faq__answer Нет, мы доставляем только по территории Российской Федерации
+
+                        .faq__block
+                            .faq__question У вас есть пункты самовывоза в Москве?
+                            .faq__answer Нет, мы доставляем только по территории Российской Федерации
+
+                        .faq__block
+                            .faq__question Цены в интернет-магазине и розничных магазинах одинаковые?
+                            .faq__answer Нет, мы доставляем только по территории Российской Федерации
+
+                        .faq__block
+                            .faq__question Товары вышел из строя (не полный комплект, некорректно функционирует) - что делать?
+                            .faq__answer Нет, мы доставляем только по территории Российской Федерации
+
+                // ASIDE
+                .personal__aside
+
+                    ul
+                        li.aside__item
+                            a.aside__item-link(href="#") Личные данные
+
+                        li.aside__item
+                            a.aside__item-link(href="#") Текущие заказы
+
+                        li.aside__item
+                            a.aside__item-link(href="#") История заказов
+
+                        li.aside__item
+                            a.aside__item-link(href="#") Магазины
+
+                        li.aside__item.active
+                            a.aside__item-link(href="#") FAQ
+
+                        li.aside__item
+                            a.aside__item-link(href="#") правила продажи
+
+                        li.aside__item
+                            a.aside__item-link(href="#") способы оплаты/доставки
+
+                        li.aside__item
+                            a.aside__item-link(href="#") правила возврата
+
+                        li.aside__item
+                            a.aside__item-link(href="#") Контакты

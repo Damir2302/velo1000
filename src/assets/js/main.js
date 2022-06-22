@@ -156,4 +156,10 @@ $(document).ready(function() {
         }
     })
 
+    // FAQ
+    $('.faq__block').on('click', function() {
+        $(this).toggleClass('active')
+        $(this).find('.faq__answer').slideToggle()
+    })
+
 });
