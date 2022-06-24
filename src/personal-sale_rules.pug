@@ -1,5 +1,6 @@
 ---
 title: Velo1000 | Личный кабинет - Правила продажи
+personalPage: sale-rules
 ---
 
 extends includes/_page
@@ -17,41 +18,15 @@ block main
 
             h3 Правила продажи
 
-            .personal__container
+            .personal__wrap
 
-                .personal__block
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut neque sed eget a. Leo, ornare pellentesque lacinia tellus, scelerisque id est nulla. Malesuada arcu at nunc ornare eget aliquam sit augue phasellus. Nullam sit elit ullamcorper arcu, cras. Duis augue amet nec neque odio id. Nunc odio proin tellus gravida.
-                      br
-                      br
-                      |Ac, suscipit pellentesque eget morbi massa est in. Quam at ultricies velit, nec nulla sodales gravida. Eget amet elementum odio blandit nisl. Vitae proin at nam vitae mollis. Vel at ac est fermentum. Enim, curabitur sapien, hac felis cursus dictum orci massa. Ipsum nulla odio non etiam est lobortis sed purus. Velit sit diam ut suspendisse dignissim. Sed morbi ultrices eget bibendum commodo a et, iaculis senectus. Morbi risus, imperdiet consectetur amet, commodo turpis aliquam. Dolor semper et nec aenean.
+                .personal__container
 
-                // ASIDE
-                .personal__aside
+                    .personal__block
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut neque sed eget a. Leo, ornare pellentesque lacinia tellus, scelerisque id est nulla. Malesuada arcu at nunc ornare eget aliquam sit augue phasellus. Nullam sit elit ullamcorper arcu, cras. Duis augue amet nec neque odio id. Nunc odio proin tellus gravida.
+                        br
+                        br
+                        |Ac, suscipit pellentesque eget morbi massa est in. Quam at ultricies velit, nec nulla sodales gravida. Eget amet elementum odio blandit nisl. Vitae proin at nam vitae mollis. Vel at ac est fermentum. Enim, curabitur sapien, hac felis cursus dictum orci massa. Ipsum nulla odio non etiam est lobortis sed purus. Velit sit diam ut suspendisse dignissim. Sed morbi ultrices eget bibendum commodo a et, iaculis senectus. Morbi risus, imperdiet consectetur amet, commodo turpis aliquam. Dolor semper et nec aenean.
 
-                    ul
-                        li.aside__item
-                            a.aside__item-link(href="#") Личные данные
-
-                        li.aside__item
-                            a.aside__item-link(href="#") Текущие заказы
-
-                        li.aside__item
-                            a.aside__item-link(href="#") История заказов
-
-                        li.aside__item
-                            a.aside__item-link(href="#") Магазины
-
-                        li.aside__item
-                            a.aside__item-link(href="#") FAQ
-
-                        li.aside__item.active
-                            a.aside__item-link(href="#") правила продажи
-
-                        li.aside__item
-                            a.aside__item-link(href="#") способы оплаты/доставки
-
-                        li.aside__item
-                            a.aside__item-link(href="#") правила возврата
-
-                        li.aside__item
-                            a.aside__item-link(href="#") Контакты
+                    // ASIDE
+                    include components/_personal-aside

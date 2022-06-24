@@ -219,3 +219,119 @@
 .faq__block .faq__answer {
     display: none;
 }
+
+//////////////////////////
+/// PAGE SHOPS
+//////////////////////////
+.page-personal.personal-contacts {
+    padding: 0;
+}
+
+.personal-contacts > .container {
+    padding: 0;
+}
+
+.personal-contacts .container {
+
+    @include breakpoint(lg) {
+        padding: 0;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 100%;
+    }
+}
+
+.personal-contacts h3 {
+    padding: 0 20px;
+
+    @include breakpoint(md) {
+        padding: 0 30px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0 40px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 60px auto;
+        max-width: 1280px;
+    }
+}
+
+.personal-contacts .personal__wrap {
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        display: block;
+    }
+}
+
+.personal-contacts .personal__container {
+
+    @include breakpoint(lg) {
+        margin-bottom: 80px;
+        padding: 0 40px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 60px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0 auto 60px;
+        max-width: 1280px;
+    }
+}
+
+.personal-contacts .yandex-map {
+    padding-top: 0;
+}
+
+.personal-contacts .shops__addresses {
+    padding: 0 0 60px;
+}
+
+.personal-contacts .shops__addresses-inner {
+
+    @include breakpoint(lg) {
+        row-gap: 50px;
+    }
+}
+
+.personal-contacts .shops__block {
+
+    @include breakpoint(lg) {
+        width: calc((100% - 107px) / 2);
+    }
+}
+
+.personal-contacts .shops__metro-name {
+    margin: 0;
+    margin-left: 28px;
+}
+
+//////////////////////////
+/// PAGE HISTORY
+//////////////////////////
+
+.history__block {
+    background: #F7F7F7;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.history__head {
+    padding: 16px 29px;
+    background: $red;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

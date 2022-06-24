@@ -1,0 +1,39 @@
+---
+title: Velo1000 | Личный кабинет - История заказов
+personalPage: history
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Личный кабинет', 'Личный кабинет', 'История заказов')
+    // Breadcrumbs::End
+
+    .page-personal
+
+        .container
+
+            h3 История заказов
+
+            .personal__wrap
+
+                .personal__container
+
+                    .personal__block
+
+                        .history
+
+                            .history__block
+                                .history__head ЗАКАЗ №104 ОТ 04.04.2022, 1 ТОВАР НА СУММУ 6 000 ₽
+                                .history__body
+                                    p.history__body-left 1 товар на сумму 6 000 ₽
+                                    p.history__body-right <span>Заказ выполнен</span> 11.04.2022
+                                .history__bottom
+                                    a(href="#") Подробнее о заказе
+
+
+                    // ASIDE
+                    include components/_personal-aside

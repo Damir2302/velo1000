@@ -1,0 +1,29 @@
+.personal__aside
+
+    ul
+        li.aside__item
+            a.aside__item-link(href="#") Личные данные
+
+        li.aside__item
+            a.aside__item-link(href="#") Текущие заказы
+
+        li.aside__item(class= (personalPage == 'history') ? 'active' : '')
+            a.aside__item-link(href="personal-history.html") История заказов
+
+        li.aside__item(class= (personalPage == 'shops') ? 'active' : '')
+            a.aside__item-link(href="personal-shops.html") Магазины
+
+        li.aside__item(class= (personalPage == 'faq') ? 'active' : '')
+            a.aside__item-link(href="personal-faq.html") FAQ
+
+        li.aside__item(class= (personalPage == 'sale-rules') ? 'active' : '')
+            a.aside__item-link(href="personal-sale_rules.html") правила продажи
+
+        li.aside__item(class= (personalPage == 'delivery') ? 'active' : '')
+            a.aside__item-link(href="personal-delivery.html") способы оплаты/доставки
+
+        li.aside__item(class= (personalPage == 'return-rules') ? 'active' : '')
+            a.aside__item-link(href="personal-return_rules.html") правила возврата
+
+        li.aside__item(class= (personalPage == 'contacts') ? 'active' : '')
+            a.aside__item-link(href="#") Контакты
