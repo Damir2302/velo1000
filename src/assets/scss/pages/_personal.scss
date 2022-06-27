@@ -316,16 +316,27 @@
 }
 
 //////////////////////////
-/// PAGE HISTORY
+/// PAGE HISTORY/ORDER
 //////////////////////////
-
-.history__block {
+.window__block {
     background: #F7F7F7;
     border-radius: 16px;
     overflow: hidden;
 }
 
-.history__head {
+.window__block ~ .window__block {
+    margin-top: 16px;
+
+    @include breakpoint(md) {
+        margin-top: 30px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 40px;
+    }
+}
+
+.window__head {
     padding: 16px 29px;
     background: $red;
     font-weight: 700;
@@ -334,4 +345,300 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+
+    @include breakpoint(md) {
+        padding: 17px 40px 11px;
+        text-align: left;
+    }
+}
+
+.window__body {
+    padding: 16px 20px 20px;
+    position: relative;
+
+    @include breakpoint(md) {
+        padding: 34px 40px 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.window__body::after {
+    content: '';
+    background: #E7E7E7;
+    position: absolute;
+    top: 100%;
+    display: block;
+    width: calc(100% - 40px);
+    height: 1px;
+
+    @include breakpoint(md) {
+        width: calc(100% - 80px);
+    }
+}
+
+.window__body-left {
+    margin-bottom: 2px;
+}
+
+.window__body-right span {
+    color: #219653;
+}
+
+.window__bottom {
+    padding: 20px;
+
+    @include breakpoint(md) {
+        padding: 20px 40px 16px;
+        text-align: right;
+    }
+}
+
+.window__bottom a {
+    color: $red;
+}
+
+//////////////////////////
+/// PAGE ORDER
+//////////////////////////
+.page-order .window__body {
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
+
+.window__body h6 {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #686461;
+
+    @include breakpoint(md) {
+        margin-bottom: 12px;
+    }
+}
+
+.window__block .grey-text {
+    color: #686461;
+}
+
+.order-row {
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.order-col p:first-child {
+
+    @include breakpoint(md) {
+        margin-bottom: 12px;
+    }
+}
+
+.order-col:last-child {
+
+    @include breakpointMax(md) {
+        display: flex;
+        column-gap: 10px;
+    }
+}
+
+.order-bottom {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.order-bottom-more {
+    margin-bottom: 16px;
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
+
+.order-bottom-more.mobile-only {
+    display: block;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.order-bottom-more a {
+    display: flex;
+    align-items: center;
+    color: $red;
+}
+
+.order-bottom-more a::after {
+    content: '\f078';
+    margin-left: 10px;
+    font-family: $icon;
+    font-size: 10px;
+}
+
+.order-bottom-action {
+    display: flex;
+    column-gap: 32px;
+}
+
+.order-bottom-action a {
+    display: flex;
+}
+
+.order-bottom-action a::before {
+    margin-top: 4px;
+    margin-right: 4px;
+    font-family: $icon;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.order-cancel::before {
+    content: '\f00d';
+}
+
+.order-repeat {
+    color: #27AE60;
+}
+
+.order-repeat::before {
+    content: '\f363';
+}
+
+.window__body ~ .window__body {
+    padding: 20px;
+}
+
+.window__body.last-element {
+    padding: 20px 20px 15px;
+}
+
+.window__body.last-element::after {
+    content: none;
+}
+
+.change-payment {
+    display: flex;
+    align-items: center;
+    color: $red;
+}
+
+.change-payment::after {
+    content: '\f078';
+    margin-left: 10px;
+    font-family: $icon;
+    font-size: 10px;
+}
+
+.order-payment ~ .order-payment {
+    margin-top: 16px;
+}
+
+.order-payment-status {
+    margin-top: 2px;
+    padding: 6px 8px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    color: #EB5757;
+    border: 1px solid #EB5757;
+    border-radius: 2px;
+}
+
+.order-block {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.order-block ~ .order-block {
+    margin-top: 20px;
+}
+
+.order-block-info {
+    padding: 16px;
+}
+
+.order-price {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-price p {
+    margin-bottom: 12px;
+    width: 50%;
+    font-size: 14px;
+}
+
+.order-price .small-text {
+    display: block;
+    color: #686461;
+}
+
+.order-price p:last-child {
+    margin: 0;
+    width: 100%;
+}
+
+.order-price p:last-child .small-text {
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.order-window-bottom {
+    padding: 0 20px 20px;
+}
+
+.order-window-bottom p span:last-child {
+    font-weight: 500;
+}
+
+.order-window-bottom span:last-child {
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.window__bottom .upp-text * {
+    color: #686461;
+    text-transform: uppercase;
+}
+
+.order-final {
+    margin-top: 20px;
+    display: flex;
+}
+
+.order-final p:last-child {
+    margin-left: 4px;
+    display: inline-block;
+}
+
+.orders-btn {
+    margin: 30px auto 0;
+    padding: 18px 36px;
+    display: flex;
+    height: auto;
+    max-width: 280px;
+}
+
+.orders-btn::before {
+    content: '\f060';
+    margin-right: 5px;
+    font-family: $icon;
+    font-weight: 400;
+    font-size: 12px;
 }

@@ -1,0 +1,128 @@
+---
+title: Velo1000 | Личный кабинет - МОЙ ЗАКАЗ №104, СОЗДАН 04.04.2022
+personalPage: history
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Личный кабинет', 'Личный кабинет', 'Текущие заказы', 'МОЙ ЗАКАЗ №104, СОЗДАН 04.04.2022')
+    // Breadcrumbs::End
+
+    .page-personal.page-order
+
+        .container
+
+            h3 МОЙ ЗАКАЗ №104, СОЗДАН 04.04.2022
+
+            .personal__wrap
+
+                .personal__container
+
+                    .personal__block
+
+                        .window__block
+                            .window__head ЗАКАЗ №104 ОТ 04.04.2022, 1 ТОВАР НА СУММУ 6 000 ₽
+
+                            .window__body
+                                h6 Информация о заказе
+
+                                .order-row
+                                    .order-col
+                                        p.grey-text ФИО
+                                        p Алексей
+                                        .order-bottom-more.mobile-only
+                                            a(href="javascript:void(0)") Подробнее
+                                    .order-col
+                                        p.grey-text Текущий статус, от 04.04.2022:
+                                        p Принят, ожидается оплата
+                                    .order-col
+                                        p.grey-text Сумма
+                                        p <b>6 000 ₽</b>
+
+                                .order-bottom
+                                    .order-bottom-more
+                                        a(href="javascript:void(0)") Подробнее
+                                    .order-bottom-action
+                                        a.order-cancel.grey-text(href="#") Отменить заказ
+                                        a.order-repeat(href="#") Повторить заказ
+
+                            .window__body
+                                h6 Параматеры оплаты
+
+                                .order-payment
+                                    p <b>Заказ №104 от 04.04.2022, Принят, ожидается оплата</b>
+                                    p Сумма заказа: 6 000 ₽
+
+                                .order-payment
+                                    p <b>Счет №104/1 от 04.04.2022, Наличные курьеру</b>
+                                    span.order-payment-status Не оплачено
+
+                                .order-payment
+                                    p Сумма к оплате по счету: 0 ₽
+                                    a.change-payment(href="javascript:voidscript(0)") Сменить способ оплаты
+
+                            .window__body
+                                h6 Параматеры отгрузки
+
+                                p <b>Отгрузка №104/2, стоимость&nbsp;доставки 0 ₽</b>
+                                p(style="white-space:nowrap") Служба доставки : Без доставки
+                                p Статус отгрузки: Ожидает обработки
+
+                            .window__body.last-element
+                                h6 Содержимое заказа
+
+                                .order-block
+                                    .order-block-image
+                                        img(src="assets/images/item.jpg", alt="img")
+                                    .order-block-info
+                                        .order-label
+                                            p BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                        .order-price
+                                            p
+                                                span.small-text Цена
+                                                span 10 000 000 ₽
+                                            p
+                                                span.small-text Кол-во
+                                                span 1
+                                            p
+                                                span.small-text Сумма:
+                                                span <b>10 000 000 ₽</b>
+
+                                .order-block
+                                    .order-block-image
+                                        img(src="assets/images/item.jpg", alt="img")
+                                    .order-block-info
+                                        .order-label
+                                            p BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                        .order-price
+                                            p
+                                                span.small-text Цена
+                                                span 10 000 000 ₽
+                                            p
+                                                span.small-text Кол-во
+                                                span 1
+                                            p
+                                                span.small-text Сумма:
+                                                span <b>10 000 000 ₽</b>
+
+                            .window__bottom.order-window-bottom
+                                p
+                                    span.grey-text Товаров на:
+                                    span 10 000 000 ₽
+                                p
+                                    span.grey-text Доставка:
+                                    span 500 ₽
+
+                                .order-final
+                                    p.upp-text <b>Итого:</b>
+                                    p <b>10 000 500 ₽</b>
+
+                        a.orders-btn.button-style.button-style--transparent_black(href="#") Вернуться в список заказов
+
+
+                    // ASIDE
+                    include components/_personal-aside
