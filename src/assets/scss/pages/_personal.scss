@@ -963,8 +963,19 @@
     }
 }
 
+.form-row:last-child {
+
+    @include breakpoint(md) {
+        padding-bottom: 0;
+    }
+}
+
 .form-label {
     color: #686461;
+
+    @include breakpoint(md) {
+        flex-basis: calc(((100% / 8) * 3) + 10px)
+    }
 }
 
 .form-input {
@@ -973,7 +984,12 @@
 
     @include breakpoint(md) {
         margin-top: 0;
+        flex-basis: calc(((100% / 8) * 5) - 35px)
     }
+}
+
+.form-input p {
+    word-break: break-word;
 }
 
 .form-input.accept-type {
@@ -982,6 +998,20 @@
 
 .form-input input[data-hidden] {
     display: none;
+}
+
+.form-input-row {
+
+    @include breakpoint(md) {
+        margin-top: 12px;
+    }
+}
+
+.form-input-row:first-child {
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
 }
 
 .form-add-address {

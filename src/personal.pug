@@ -49,17 +49,19 @@ block main
                                 .form-row
                                     .form-label Адреса доставки
                                     .form-input
-                                        input(type="text" value="Москва, ул. Тверская, дом 1" data-hidden="true" data-value="address-1")
-                                        p(data-value="address-1") Москва, ул. Тверская, дом 1
-                                        input(type="text" value="Москва, ул. Баррикадная, дом 2" data-hidden="true"  data-value="address-2")
-                                        p(data-value="address-2") Москва, ул. Баррикадная, дом 2
+                                        .form-input-row
+                                            input(type="text" value="Москва, ул. Тверская, дом 1" data-hidden="true" data-value="address-1")
+                                            p(data-value="address-1") Москва, ул. Тверская, дом 1
+                                        .form-input-row
+                                            input(type="text" value="Москва, ул. Баррикадная, дом 2" data-hidden="true"  data-value="address-2")
+                                            p(data-value="address-2") Москва, ул. Баррикадная, дом 2
                                         .form-add-address
                                             span Добавить адрес
 
                                 .form-row
                                     .form-label День рождения
                                     .form-input
-                                        input(type="date" value="14.03.1993" data-hidden="true")
+                                        input(type="date" value="1993-03-14" data-hidden="true")
                                         p 14.03.1993
 
                                 .form-row
