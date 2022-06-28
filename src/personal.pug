@@ -1,0 +1,73 @@
+---
+title: Velo1000 | Личный кабинет - Личные данные
+personalPage: history
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Личный кабинет', 'Личный кабинет', 'Личные данные')
+    // Breadcrumbs::End
+
+    .page-personal.page-current
+
+        .container
+
+            h3 Личные данные
+
+            .personal__wrap
+
+                .personal__container
+
+                    .personal__block
+
+                        .personal__form
+                            form
+                                .form-row
+                                    .form-label ФИО
+                                    .form-input
+                                        input(type="text" value="Новопашина Анна" data-hidden="true")
+                                        p Новопашина Анна
+                                    .edit
+
+                                .form-row
+                                    .form-label Телефон
+                                    .form-input
+                                        input(type="tel" value="+ 7 910 200 20 20" data-hidden="true")
+                                        p + 7 910 200 20 20
+
+                                .form-row
+                                    .form-label Почта
+                                    .form-input.accept-type
+                                        input(type="email" value="anna@gmail.com" data-hidden="true")
+                                        p anna@gmail.com
+                                        .accepted
+
+                                .form-row
+                                    .form-label Адреса доставки
+                                    .form-input
+                                        input(type="text" value="Москва, ул. Тверская, дом 1" data-hidden="true" data-value="address-1")
+                                        p(data-value="address-1") Москва, ул. Тверская, дом 1
+                                        input(type="text" value="Москва, ул. Баррикадная, дом 2" data-hidden="true"  data-value="address-2")
+                                        p(data-value="address-2") Москва, ул. Баррикадная, дом 2
+                                        .form-add-address
+                                            span Добавить адрес
+
+                                .form-row
+                                    .form-label День рождения
+                                    .form-input
+                                        input(type="date" value="14.03.1993" data-hidden="true")
+                                        p 14.03.1993
+
+                                .form-row
+                                    .form-label Пол
+                                    .form-input
+                                        input(type="text" value="Женский" data-hidden="true")
+                                        p Женский
+
+
+                    // ASIDE
+                    include components/_personal-aside

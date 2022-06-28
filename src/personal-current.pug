@@ -1,0 +1,101 @@
+---
+title: Velo1000 | Личный кабинет - Текущие заказы
+personalPage: history
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Личный кабинет', 'Личный кабинет', 'Текущие заказы')
+    // Breadcrumbs::End
+
+    .page-personal.page-current
+
+        .container
+
+            h3 Текущие заказы
+
+            .personal__wrap
+
+                .personal__container
+
+                    .personal__block
+
+                        .window__block
+                            .window__head ЗАКАЗ №104 ОТ 04.04.2022, 1 ТОВАР НА СУММУ 6 000 ₽
+
+                            .window__body
+                                h6 Оплата
+
+                                .order-payment
+                                    // Статус оплаты/доставки
+                                        ".order-payment-status--pending" - ожидание
+                                        ".order-payment-status--declined" - не завершен
+                                        ".order-payment-status--success" - успешно
+                                    .order-payment-item
+                                        p Счет №104/1 от 04.04.2022, Наличные курьеру
+                                        span.order-payment-status.order-payment-status--declined Не оплачено
+                                    a.change-payment(href="javascript:voidscript(0)") Сменить способ оплаты
+                                    p.order-payment-total Сумма к оплате по счету: 0 ₽
+
+                            .window__body
+                                h6 Доставка
+
+                                .current-delivery
+                                    .current-delivery-item
+                                        p Отгрузка №104/2
+                                        span.order-payment-status.order-payment-status--declined Не отгружено
+
+                                    .current-delivery-item
+                                        p Статус отгрузки:
+                                        span.order-payment-status.order-payment-status--pending Ожидает обработки
+
+                                    .current-delivery-item
+                                        p Служба доставки:
+                                        span Без доставки
+
+                            .window__bottom
+                                a(href="#") Подробнее о заказе
+                                a.order-cancel.grey-text(href="#") Отменить заказ
+
+
+                        .window__block
+                            .window__head ЗАКАЗ №104 ОТ 04.04.2022, 1 ТОВАР НА СУММУ 6 000 ₽
+
+                            .window__body
+                                h6 Оплата
+
+                                .order-payment
+
+                                    .order-payment-item
+                                        p Счет №104/1 от 04.04.2022, Наличные курьеру
+                                        span.order-payment-status.order-payment-status--success Оплачено
+                                    a.change-payment(href="javascript:voidscript(0)") Сменить способ оплаты
+                                    p.order-payment-total Сумма к оплате по счету: 0 ₽
+
+                            .window__body
+                                h6 Доставка
+
+                                .current-delivery
+                                    .current-delivery-item
+                                        p Отгрузка №104/2
+                                        span.order-payment-status.order-payment-status--declined Не отгружено
+
+                                    .current-delivery-item
+                                        p Статус отгрузки:
+                                        span.order-payment-status.order-payment-status--pending Ожидает обработки
+
+                                    .current-delivery-item
+                                        p Служба доставки:
+                                        span Без доставки
+
+                            .window__bottom
+                                a(href="#") Подробнее о заказе
+                                a.order-cancel.grey-text(href="#") Отменить заказ
+
+
+                    // ASIDE
+                    include components/_personal-aside

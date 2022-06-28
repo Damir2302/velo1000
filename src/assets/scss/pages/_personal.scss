@@ -579,9 +579,20 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 150%;
-    color: #EB5757;
-    border: 1px solid #EB5757;
+    border: 1px solid;
     border-radius: 2px;
+}
+
+.order-payment-status--pending {
+    color: #686461;
+}
+
+.order-payment-status--declined {
+    color: #EB5757;
+}
+
+.order-payment-status--success {
+    color: #27AE60;
 }
 
 .order-block {
@@ -603,6 +614,13 @@
 
     @include breakpoint(md) {
         max-width: 224px;
+    }
+
+    @include breakpoint(xl) {
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 100px;
+        max-height: 100px;
     }
 }
 
@@ -626,6 +644,12 @@
     @include breakpoint(lg) {
         margin-right: 0;
     }
+
+    @include breakpoint(xl) {
+        padding: 20px 20px 27px 15px;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .order-label {
@@ -644,6 +668,10 @@
         margin-top: 0;
         display: block;
     }
+
+    @include breakpoint(xl) {
+        display: flex;
+    }
 }
 
 .order-price p {
@@ -655,16 +683,38 @@
         margin-bottom: 20px;
         width: auto;
     }
+
+    @include breakpoint(xl) {
+        margin: 0;
+    }
 }
 
 .order-price .small-text {
     display: block;
     color: #686461;
+
+    @include breakpoint(xl) {
+        margin-bottom: 12px;
+    }
+}
+
+.order-price p:first-child {
+
+    @include breakpoint(xl) {
+        margin-right: 30px;
+    }
 }
 
 .order-price p:last-child {
-    margin: 0;
-    width: 100%;
+
+    @include breakpointMax(xl) {
+        margin: 0;
+        width: 100%;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 80px;
+    }
 }
 
 .order-price p:last-child .small-text {
@@ -685,12 +735,23 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    @include breakpoint(xl) {
+        justify-content: unset;
+    }
 }
 
 .order-window-bottom p {
 
     @include breakpoint(md) {
         font-size: 14px;
+    }
+}
+
+.order-window-bottom p:first-child {
+
+    @include breakpoint(xl) {
+        margin-right: 56px;
     }
 }
 
@@ -714,6 +775,10 @@
 
     @include breakpoint(md) {
         margin: 0;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: auto;
     }
 }
 
@@ -748,4 +813,213 @@
     font-family: $icon;
     font-weight: 400;
     font-size: 12px;
+}
+
+//////////////////////////
+/// PAGE CURRENT
+//////////////////////////
+.page-current .window__body {
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
+
+.page-current .change-payment {
+    margin: 16px 0;
+
+    @include breakpoint(md) {
+        margin: 0;
+        align-self: flex-start;
+        justify-content: flex-end;
+        width: 35%;
+    }
+}
+
+.page-current .change-payment::after {
+    content: none;
+}
+
+.page-current .order-payment {
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.page-current .order-payment-item {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: baseline;
+        column-gap: 25px;
+        width: 65%;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 20px;
+    }
+}
+
+.page-current .order-payment-item p {
+
+    @include breakpoint(md) {
+        width: 60%;
+    }
+
+    @include breakpoint(xl) {
+        width: 70%;
+    }
+}
+
+.page-current .order-payment-status {
+    margin-top: 8px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+}
+
+.order-payment-total {
+
+    @include breakpoint(md) {
+        margin-top: 8px;
+    }
+}
+
+.current-delivery-item ~ .current-delivery-item {
+    margin-top: 16px;
+}
+
+.current-delivery-item {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+}
+
+.page-current .order-cancel {
+    margin-top: 16px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+}
+
+.page-current .order-cancel::before {
+    margin-top: 4px;
+    margin-right: 4px;
+    font-family: $icon;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.page-current .window__bottom {
+    padding-bottom: 30px;
+
+    @include breakpoint(md) {
+        padding: 16px 40px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+//////////////////////////
+/// PAGE PERSONAL
+//////////////////////////
+.personal__form {
+    padding: 30px 20px;
+    background: #F7F7F7;
+    border-radius: 16px;
+
+    @include breakpoint(md) {
+        padding: 40px;
+    }
+}
+
+.form-row {
+    margin-top: 25px;
+    position: relative;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+        padding: 16px 0;
+        display: flex;
+        border-top: 1px solid #E7E7E7;
+    }
+}
+
+.form-row:first-child {
+    margin-top: 0;
+
+    @include breakpoint(md) {
+        padding-top: 0;
+        border: none;
+    }
+}
+
+.form-label {
+    color: #686461;
+}
+
+.form-input {
+    margin-top: 8px;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+}
+
+.form-input.accept-type {
+    display: flex;
+}
+
+.form-input input[data-hidden] {
+    display: none;
+}
+
+.form-add-address {
+    display: inline-block;
+    color: $red;
+    cursor: pointer;
+}
+
+.form-add-address::before {
+    content: '\2b';
+    margin-top: 12px;
+    margin-right: 5px;
+    display: inline-block;
+    font-family: $icon;
+    font-size: 14px;
+}
+
+.personal__form .edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.personal__form .edit::before {
+    content: '\f303';
+    margin-left: 10px;
+    display: inline-block;
+    font-family: $icon;
+    font-size: 16px;
+    color: #D9D9D9;
+}
+
+.personal__form .accepted::before {
+    content: '\f058';
+    margin-left: 10px;
+    display: inline-block;
+    font-family: $icon;
+    font-size: 16px;
+    color: #27AE60;
 }
