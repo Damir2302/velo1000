@@ -103,6 +103,15 @@ input {
     border-radius: 3px;
 }
 
+textarea {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+}
+
 button {
     position: relative;
 }
@@ -187,6 +196,39 @@ input {
 .input-label::before {
     content: "*";
     color: $red;
+}
+
+.input-style-checkbox input {
+    display: none;
+}
+
+.input-style-checkbox label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-style-checkbox label::before {
+    content: '';
+    margin-right: 12px;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    color: #414141;
+    border: 1px solid #414141;
+    border-radius: 1px;
+}
+
+.input-style-checkbox input:checked + label::before {
+    content: '\f00c';
+    background: $red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $icon;
+    font-size: 10px;
+    color: #fff;
+    border-color: $red;
 }
 
 .pass-view {

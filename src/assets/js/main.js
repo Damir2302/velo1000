@@ -162,4 +162,10 @@ $(document).ready(function() {
         $(this).find('.faq__answer').slideToggle()
     })
 
+    // CART
+    $('.form__item .cart-input-checkbox input').on('change', function() {
+        $(this).parent().parent().parent().find('.form__logo').removeClass('selected')
+        $(this).parent().prev().addClass('selected')
+    })
+
 });

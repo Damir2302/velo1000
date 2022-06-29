@@ -12,11 +12,11 @@ $(document).ready(function() {
         $('.popup-auth').removeClass('open')
     })
 
-    $('.input-style input').on('focus', function() {
+    $('.input-style input, .input-style textarea').on('focus', function() {
         $(this).parent().find('.input-label').css('display', 'none');
     })
 
-    $('.input-style input').on('blur', function() {
+    $('.input-style input, .input-style textarea').on('blur', function() {
         if ($(this).val().length == 0) {
             $(this).parent().find('.input-label').css('display', 'block');
         }

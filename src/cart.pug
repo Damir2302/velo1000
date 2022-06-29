@@ -21,6 +21,7 @@ block main
 
                     .cart__block
 
+                        // ITEM
                         .cart__item
                             .cart__item-image
                                 img(src="assets/images/item.jpg", alt="img")
@@ -39,22 +40,219 @@ block main
                                         button +
                                 .cart__item-sum
                                     p.grey-text Сумма
+                                    p <b>10 000 000 ₽</b>
+
+                        // ITEM
+                        .cart__item
+                            .cart__item-image
+                                img(src="assets/images/item.jpg", alt="img")
+                            .cart__item-label
+                                p.cart__item-name BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                span.cart__item-remove
+                            .cart__item-details
+                                .cart__item-price
+                                    p.grey-text Цена
                                     p 10 000 000 ₽
+                                .cart__item-quantity
+                                    p.grey-text Кол-во
+                                    .cart__item-qt
+                                        button −
+                                        input(type="number" placeholde="0" min="1" value="1")
+                                        button +
+                                .cart__item-sum
+                                    p.grey-text Сумма
+                                    p <b>10 000 000 ₽</b>
 
-                .cart__aside
+                        // ITEM
+                        .cart__item
+                            .cart__item-image
+                                img(src="assets/images/item.jpg", alt="img")
+                            .cart__item-label
+                                p.cart__item-name BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                span.cart__item-remove
+                            .cart__item-details
+                                .cart__item-price
+                                    p.grey-text Цена
+                                    p 10 000 000 ₽
+                                .cart__item-quantity
+                                    p.grey-text Кол-во
+                                    .cart__item-qt
+                                        button −
+                                        input(type="number" placeholde="0" min="1" value="1")
+                                        button +
+                                .cart__item-sum
+                                    p.grey-text Сумма
+                                    p <b>10 000 000 ₽</b>
 
-                    .cart__total
+                    .cart__aside
 
-                        .cart__total-row
-                            p.grey-text Товаров на
-                            p 10 000 000 ₽
+                        .cart__total
 
-                        .cart__total-row
-                            p.grey-text Доставка
-                            p 500 ₽
+                            .cart__total-row
+                                p.grey-text Товаров на
+                                p 10 000 000 ₽
 
-                        .cart__total-bottom
-                            p.grey-text Итого
-                            p 10 000 500 ₽
+                            .cart__total-row
+                                p.grey-text Доставка
+                                p 500 ₽
 
+                            .cart__total-bottom
+                                p.grey-text Итого
+                                p 10 000 500 ₽
 
+                .cart__form
+
+                    h2.page-title Оформление заказа
+
+                    form
+
+                        // STEP 1
+                        .form__window
+
+                            .form__window-head
+                                span 1
+                                h4 РЕГИОН ДОСТАВКИ
+
+                            .form__window-body
+                                p.form__input-label Тип плательщика
+
+                                .cart-input-checkbox.input-style-checkbox
+                                    input#individual(type="radio", name="type" aria-hidden="true" checked)
+                                    label(for="individual") Физическое лицо
+
+                                .cart-input-checkbox.input-style-checkbox
+                                    input#legal(type="radio", name="type" aria-hidden="true")
+                                    label(for="legal") Юридическое лицо
+
+                                .form__input-wrapper
+                                    .cart-input.input-style
+                                        label.input-label Местоположение
+                                        input(type="text" name="" required)
+
+                                    .cart-input.input-style
+                                        label.input-label Индекс
+                                        input(type="text" name="" required)
+
+                            .form__window-footer
+                                .form__buttons
+                                    button.button-style.button-style--red Далее
+
+                        // STEP 2
+                        .form__window
+
+                            .form__window-head
+                                span 2
+                                h4 Доставка
+
+                            .form__window-body
+
+                                .form__block
+
+                                    .form__item
+                                        .form__logo
+                                            .from__img
+                                                img(src="assets/images/box-delivery.png", alt="img")
+                                            p Доставка курьером
+                                            span.form__item-price 500 ₽
+                                        .cart-input-checkbox.input-style-checkbox
+                                            input#courier(type="radio", name="delivery")
+                                            label(for="courier") Доставка курьером
+
+                                    .form__item
+                                        .form__logo
+                                            .from__img
+                                                img(src="assets/images/pochta-russia.png", alt="img")
+                                            p Доставка почтой России
+                                        .cart-input-checkbox.input-style-checkbox
+                                            input#mail(type="radio", name="delivery")
+                                            label(for="mail") Доставка почтой России
+
+                                    .form__selected
+                                        .form__logo
+                                            .from__img
+                                                img(src="assets/images/box-delivery.png", alt="img")
+                                            p Доставка курьером
+                                        p.form__explanation Вы можете самостоятельно забрать заказ из нашего магазина.
+                                        p.form__price.grey-text Стоимость: <b>500 ₽</b>
+
+                            .form__window-footer
+                                .form__buttons
+                                    button.button-style.button-style--transparent_red Назад
+                                    button.button-style.button-style--red Далее
+
+                        // STEP 3
+                        .form__window
+
+                            .form__window-head
+                                span 3
+                                h4 Оплата
+
+                            .form__window-body
+
+                                .form__block
+
+                                    .form__item
+                                        .form__logo
+                                            .from__img
+                                                img(src="assets/images/money.png", alt="img")
+                                            p Наличные курьеру
+                                        .cart-input-checkbox.input-style-checkbox
+                                            input#cash(type="radio", name="payment")
+                                            label(for="cash") Наличные курьеру
+
+                                    .form__item
+                                        .form__logo
+                                            .from__img
+                                                img(src="assets/images/visa.png", alt="img")
+                                            p Банковские карты
+                                        .cart-input-checkbox.input-style-checkbox
+                                            input#card(type="radio", name="payment")
+                                            label(for="card") Банковские карты
+
+                                    .form__selected
+                                        .form__logo
+                                            .from__img
+                                                img(src="assets/images/box-delivery.png", alt="img")
+                                            p Наличные курьеру
+                                        p.form__explanation Оплата производится наличными деньгами, в момент получения заказа. Подтверждением вашей оплаты является фискальный кассовый чек, вручаемый во время получения и оплаты заказа.
+
+                            .form__window-footer
+                                .form__buttons
+                                    button.button-style.button-style--trnsparent_raed Назад
+                                    button.button-style.button-style--red Далее
+
+                        // STEP 4
+                        .form__window
+
+                            .form__window-head
+                                span 4
+                                h4 Покупатель
+
+                            .form__window-body
+
+                                .cart-input.input-style
+                                    label.input-label ФИО
+                                    input(type="text" name="" required)
+
+                                .cart-input.input-style
+                                    label.input-label Телефон
+                                    input(type="text" name="" required)
+
+                                .cart-input.input-style
+                                    label.input-label E-Mail
+                                    input(type="text" name="" required)
+
+                                .cart-input.input-style
+                                    label.input-label Адрес доставки
+                                    input(type="text" name="" required)
+
+                                .cart-input.input-style
+                                    label.input-label Комментарии к заказу
+                                    textarea(name="")
+
+                            .form__window-footer
+                                .form__buttons
+                                    button.button-style.button-style--transparent_red Назад
+
+                        button.button-style.button-style--red Оформить заказ
+                        small Нажимая кнопку «Оформить заказ», я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных в Согласии на обработку персональных данных
