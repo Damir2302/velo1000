@@ -206,6 +206,10 @@ input {
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    @include breakpoint(md) {
+        align-items: unset;
+    }
 }
 
 .input-style-checkbox label::before {
@@ -217,6 +221,10 @@ input {
     color: #414141;
     border: 1px solid #414141;
     border-radius: 1px;
+
+    @include breakpoint(md) {
+        margin-top: 6px;
+    }
 }
 
 .input-style-checkbox input:checked + label::before {
@@ -229,6 +237,10 @@ input {
     font-size: 10px;
     color: #fff;
     border-color: $red;
+
+    @include breakpoint(md) {
+        align-items: unset;
+    }
 }
 
 .pass-view {
