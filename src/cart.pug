@@ -36,7 +36,7 @@ block main
                                     p.grey-text Кол-во
                                     .cart__item-qt
                                         button −
-                                        input(type="number" placeholde="0" min="1" value="1")
+                                        input(type="number" placeholder="0" min="1" value="1")
                                         button +
                                 .cart__item-sum
                                     p.grey-text Сумма
@@ -57,7 +57,7 @@ block main
                                     p.grey-text Кол-во
                                     .cart__item-qt
                                         button −
-                                        input(type="number" placeholde="0" min="1" value="1")
+                                        input(type="number" placeholder="0" min="1" value="1")
                                         button +
                                 .cart__item-sum
                                     p.grey-text Сумма
@@ -78,7 +78,7 @@ block main
                                     p.grey-text Кол-во
                                     .cart__item-qt
                                         button −
-                                        input(type="number" placeholde="0" min="1" value="1")
+                                        input(type="number" placeholder="0" min="1" value="1")
                                         button +
                                 .cart__item-sum
                                     p.grey-text Сумма
@@ -230,25 +230,27 @@ block main
 
                             .form__window-body
 
-                                .cart-input.input-style
-                                    label.input-label ФИО
-                                    input(type="text" name="" required)
+                                .form__fields
 
-                                .cart-input.input-style
-                                    label.input-label Телефон
-                                    input(type="text" name="" required)
+                                    .cart-input.input-style
+                                        label.input-label ФИО
+                                        input(type="text" name="" required)
 
-                                .cart-input.input-style
-                                    label.input-label E-Mail
-                                    input(type="text" name="" required)
+                                    .cart-input.input-style
+                                        label.input-label Телефон
+                                        input(type="tel" name="" required)
 
-                                .cart-input.input-style
-                                    label.input-label Адрес доставки
-                                    input(type="text" name="" required)
+                                    .cart-input.input-style
+                                        label.input-label E-Mail
+                                        input(type="text" name="" required)
 
-                                .cart-input.input-style
-                                    label.input-label Комментарии к заказу
-                                    textarea(name="")
+                                    .cart-input.input-style
+                                        label.input-label Адрес доставки
+                                        input(type="text" name="" required)
+
+                                    .cart-input.cart-input-textarea.input-style
+                                        label.input-label Комментарии к заказу
+                                        textarea(name="" required)
 
                             .form__window-footer
                                 .form__buttons

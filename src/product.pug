@@ -1,0 +1,183 @@
+---
+title: Velo1000 | Контакты
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('', 'Адаптеры (Петухи)', 'Фрезерованный "петух" для крепления заднего переключателя к раме F-001')
+    // Breadcrumbs::End
+
+    .page-product
+
+        .container
+
+            // PRODUCT INFO
+            .product__container
+
+                .product__img
+                        img(src="assets/images/product.png", alt="img")
+
+                .product
+
+                    h4.product__title Фрезерованный "петух" для крепления заднего переключателя к раме F-001
+
+                    .product__img-mobile
+                        img(src="assets/images/product.png", alt="img")
+
+                    .product__cost <b>10 000 000 ₽</b> <span>/шт</span>
+
+                    .product__action
+                        button.product__btn
+                            .btn-icon
+                                img(src="assets/images/compare-icon-red.svg", alt="icon")
+                            span Сравнить
+                        button.product__btn
+                            .btn-icon
+                                i.far.fa-heart
+                            span В избранное
+
+                    .product__availability
+                        p Наличие:
+
+                        ul
+                            li На складе
+                            li.unavailable м.Сокольники
+                            li м.Беломорская
+                            li м.Водный Стадион
+
+                    .product__char
+                        .product__char-row
+                            p Артикул
+                            p 1245678
+                        .product__char-row
+                            p Тип катания
+                            p Кросс-кантри
+                        .product__char-row
+                            p Цвет
+                            p Чёрный
+                        .product__char-row
+                            p Размер колеса
+                            p 27 дюймов
+                        .product__char-row
+                            p Тип корда
+                            p Радиальный
+
+                    .product__buttons
+                        .product__btn-quantity
+                            button −
+                            input(type="number" placeholder="0" min="1" value="1")
+                            button +
+                        a.product__btn-order.button-style.button-style--red в корзину
+                        a.product__btn-fast_order.button-style.button-style--transparent_red Купить в 1 клик
+
+            // PRODUCT DESCRIPTION
+            .product__desc
+
+                .product__tabs.swiper(data-active="1")
+
+                    .swiper-wrapper
+
+                        .swiper-slide
+                            p.active(data-index="1") Описание
+                        .swiper-slide
+                            p(data-index="2") Доставка и оплата
+                        .swiper-slide
+                            p(data-index="3") Доставка в регионы
+                        .swiper-slide
+                            p(data-index="4") Наличие в магазинах
+
+                .product__tabs-content(data-show="1")
+
+                    .product-desc
+                        h3 Описание
+                        p Подходит для велосипедов: KONA, MARIN, NORCO, FUJI, ORBEA, KHS, MONGOOSE, ORANGE, IRONHORSE, SCHWINN, BERGAMONT, HASA, GHOST, CUBE, MERIDA, STELS.
+
+                .product__banner
+                    h3 Есть вопросы?
+                    .product__banner-inner
+                        p Заполните форму обратной связи, мы свяжемся с Вами и ответим на все вопросы о товаре
+                        button.button-style.button-style--red задать вопрос
+
+            // PRODUCT SIMILAR
+            .product__similar
+
+                h2 ПОХОЖИЕ ТОВАРЫ
+
+                .product__similar-block
+
+                    .product__block
+                        .product__image
+                            img(src="assets/images/item.jpg", alt="img")
+                        .product__item
+                            p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                            .product__card
+                                p.product__price 10 000 000 ₽
+                                .product__card-actions
+                                    a.compare-btn(href="#")
+                                        .action-icon
+                                            img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                    a.favorite-btn(href="#")
+                                        .action-icon
+                                            i.fal.fa-heart
+                                    a.cart-btn(href="#")
+                                        .action-icon
+                                            i.far.fa-cart-shopping
+                    .product__block
+                        .product__image
+                            img(src="assets/images/item.jpg", alt="img")
+                        .product__item
+                            p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                            .product__card
+                                p.product__price 10 000 000 ₽
+                                .product__card-actions
+                                    a.compare-btn(href="#")
+                                        .action-icon
+                                            img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                    a.favorite-btn(href="#")
+                                        .action-icon
+                                            i.fal.fa-heart
+                                    a.cart-btn(href="#")
+                                        .action-icon
+                                            i.far.fa-cart-shopping
+
+                    .product__block
+                        .product__image
+                            img(src="assets/images/item.jpg", alt="img")
+                        .product__item
+                            p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                            .product__card
+                                p.product__price 10 000 000 ₽
+                                .product__card-actions
+                                    a.compare-btn(href="#")
+                                        .action-icon
+                                            img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                    a.favorite-btn(href="#")
+                                        .action-icon
+                                            i.fal.fa-heart
+                                    a.cart-btn(href="#")
+                                        .action-icon
+                                            i.far.fa-cart-shopping
+
+                    .product__block
+                        .product__image
+                            img(src="assets/images/item.jpg", alt="img")
+                        .product__item
+                            p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                            .product__card
+                                p.product__price 10 000 000 ₽
+                                .product__card-actions
+                                    a.compare-btn(href="#")
+                                        .action-icon
+                                            img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                    a.favorite-btn(href="#")
+                                        .action-icon
+                                            i.fal.fa-heart
+                                    a.cart-btn(href="#")
+                                        .action-icon
+                                            i.far.fa-cart-shopping
+
+

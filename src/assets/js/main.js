@@ -168,4 +168,10 @@ $(document).ready(function() {
         $(this).parent().prev().addClass('selected')
     })
 
+    // PRODUCT PAGE TABS
+    let tabsSlide = new Swiper(".product__tabs", {
+        slidesPerView: 'auto',
+        freeMode: true
+    });
+
 });

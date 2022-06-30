@@ -15,10 +15,22 @@
     }
 }
 
+.cart__container {
+
+    @include breakpoint(xl) {
+        display: flex;
+        column-gap: 40px;
+    }
+}
+
 .cart__block {
     border: 1px solid #E7E7E7;
     border-radius: 15px;
     overflow: hidden;
+
+    @include breakpoint(xl) {
+        width: 100%;
+    }
 }
 
 .cart__item {
@@ -42,6 +54,13 @@
         height: 236px;
         min-width: 245px;
         min-height: 236px;
+    }
+
+    @include breakpoint(lg) {
+        width: 156px;
+        height: 150px;
+        min-width: 156px;
+        min-height: 150px;
     }
 }
 
@@ -76,6 +95,11 @@
     @include breakpoint(md) {
         bottom: 20px;
     }
+
+    @include breakpoint(lg) {
+        right: 15px;
+        bottom: 15px;
+    }
 }
 
 .cart__item-remove::before {
@@ -100,6 +124,25 @@
         padding: 20px 27px 20px 0;
         flex-direction: column;
     }
+
+    @include breakpoint(lg) {
+        margin-right: 95px;
+        padding: 20px 0;
+        flex-direction: row;
+        width: 100%;
+        max-width: 325px;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 40px;
+    }
+}
+
+.cart__item-details p:first-of-type {
+
+    @include breakpoint(lg) {
+        margin-bottom: 12px;
+    }
 }
 
 .cart__item-price {
@@ -107,6 +150,10 @@
 
     @include breakpoint(md) {
         width: auto;
+    }
+
+    @include breakpoint(xl) {
+        width: calc(100% / 3);
     }
 }
 
@@ -117,6 +164,10 @@
     @include breakpoint(md) {
         width: auto;
         max-width: 75px;
+    }
+
+    @include breakpoint(xl) {
+        width: calc(100% / 3);
     }
 }
 
@@ -169,6 +220,10 @@
         display: block;
         width: auto;
     }
+
+    @include breakpoint(xl) {
+        width: calc((100% / 3) - 20px);
+    }
 }
 
 .cart__total {
@@ -180,12 +235,18 @@
     @include breakpoint(md) {
         padding: 0 20px;
     }
+
+    @include breakpoint(xl) {
+        margin-top: 0;
+        padding: 4px 21.5px;
+    }
 }
 
 .cart__total-row {
     padding: 16px 0;
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
     border-bottom: 1px solid #E7E7E7;
 }
 
@@ -193,8 +254,16 @@
     padding: 16px 0;
     display: flex;
     justify-content: space-between;
+    width: 225px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.cart__form {
+
+    @include breakpoint(xl) {
+        max-width: 890px;
+    }
 }
 
 .cart__form .page-title {
@@ -202,6 +271,14 @@
 
     @include breakpoint(md) {
         margin: 40px 0 30px;
+    }
+
+    @include breakpoint(lg) {
+        margin: 50px 0 30px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 70px 0 30px;
     }
 }
 
@@ -292,6 +369,7 @@
 
 .form__buttons .button-style {
     width: 50%;
+    font-size: 14px;
 
     @include breakpoint(md) {
         width: 135px;
@@ -304,6 +382,29 @@
 
 .form__buttons .button-style--transparent_red {
     margin-right: auto;
+}
+
+.form__block {
+
+    @include breakpoint(md) {
+        display: flex;
+        column-gap: 15px;
+    }
+
+    @include breakpoint(lg) {
+        column-gap: 22px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 20px;
+    }
+}
+
+.form__item {
+
+    @include breakpoint(lg) {
+        width: calc(100% / 3);
+    }
 }
 
 .form__item ~ .form__item {
@@ -326,8 +427,18 @@
 
     @include breakpoint(md) {
         margin-bottom: 25px;
-        padding: 12px 5px 12px 12px;
+        padding: 12px 12px;
         column-gap: 12px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 20px;
+        padding: 24px 30px;
+        column-gap: 20px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 14px;
     }
 }
 
@@ -349,6 +460,13 @@
         min-height: 65px;
         max-width: 65px;
         max-height: 65px;
+    }
+
+    @include breakpoint(lg) {
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 80px;
+        max-height: 80px;
     }
 }
 
@@ -379,17 +497,30 @@
     @include breakpoint(md) {
         right: 8px;
     }
+
+    @include breakpoint(lg) {
+        right: 25px;
+    }
 }
 
 .form__selected {
     margin-top: 24px;
     padding: 24px 20px;
-    border: 1px solid #F7F7F7;
+    border: 1px solid #E7E7E7;
     border-radius: 16px;
 
     @include breakpoint(md) {
         margin-top: 0;
         padding: 11px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 24px 31px;
+        width: calc(100% / 3);
+    }
+
+    @include breakpoint(xl) {
+        padding: 24px 20px;
     }
 }
 
@@ -407,6 +538,10 @@
 
     @include breakpoint(md) {
         margin-bottom: 16px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 170px;
     }
 }
 
@@ -426,6 +561,10 @@
     @include breakpoint(md) {
         margin-top: 5px;
     }
+
+    @include breakpoint(xl) {
+        margin-top: 16px;
+    }
 }
 
 .cart-input ~ .cart-input {
@@ -435,11 +574,35 @@
     }
 }
 
-.form__block {
+.form__fields {
 
     @include breakpoint(md) {
         display: flex;
-        column-gap: 15px;
+        flex-wrap: wrap;
+        column-gap: 13px;
+        row-gap: 20px;
+    }
+
+    @include breakpoint(lg) {
+        column-gap: 20px;
+    }
+}
+
+.form__fields .cart-input {
+
+    @include breakpoint(md) {
+        width: calc(50% - (13px / 2));
+    }
+
+    @include breakpoint(lg) {
+        width: calc(50% - (20px / 2));
+    }
+}
+
+.form__fields .cart-input-textarea {
+
+    @include breakpoint(lg) {
+        width: 100%;
     }
 }
 
@@ -451,6 +614,12 @@
     margin: 40px 0 20px;
     width: 100%;
     max-width: 280px;
+    font-size: 14px;
+
+    @include breakpoint(md) {
+        margin: 50px 0 20px;
+        max-width: 190px;
+    }
 }
 
 .form-notify {

@@ -21,4 +21,5 @@ mixin breadcrumbs(title, ...items)
                         .breadcrumbs-item
                             a(href="#")= item
 
-            h1.page-title= title
+            if title != ''
+                h1.page-title= title
