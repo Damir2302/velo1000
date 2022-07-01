@@ -16,6 +16,11 @@
     font-size: 14px;
     line-height: 19px;
     color: #686461;
+
+    @include breakpointMax(xl) {
+        max-width: 360px;
+        @include textLimit(1);
+    }
 }
 
 .breadcrumbs-item span {

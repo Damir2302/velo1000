@@ -1,0 +1,28 @@
+.popup-question.animate__animated.animate__fadeIn
+
+    .popup-question__inner
+
+        .close-question
+
+        h3.question__title Задать вопрос
+        p.question__label Заполните форму обратной связи, мы свяжемся с Вами и ответим на все вопросы о товаре
+
+        .question__body
+
+            .question__login
+
+                form
+                    .input-style
+                        label.input-label Имя
+                        input(type="text" required)
+
+                    .input-style
+                        label.input-label E-mail
+                        input(type="email" required)
+
+                    .input-style
+                        label.input-label Вопрос
+                        textarea(required)
+
+                    button#submitLogin.button-style.button-style--red(type="submit") Отправить вопрос
+                    small Нажимая на кнопку, соглашаетесь на обработку персональных данных

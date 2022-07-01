@@ -172,6 +172,17 @@ $(document).ready(function() {
     let tabsSlide = new Swiper(".product__tabs", {
         slidesPerView: 'auto',
         freeMode: true
-    });
+    })
+
+    if ($(window).width() >= 744) {
+        tabsSlide.destroy()
+    }
+
+    $('.tab-nav').on('click', function() {
+        $('.tab-nav, .tab-content').removeClass('active')
+        $(this).addClass('active')
+
+        $(`.tab-content[data-active="${$(this).attr('data-index')}"]`).addClass('active')
+    })
 
 });
