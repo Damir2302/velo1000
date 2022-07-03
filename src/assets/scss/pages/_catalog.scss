@@ -1,0 +1,128 @@
+.page-catalog {
+    padding: 30px 0 60px;
+
+    @include breakpoint(md) {
+        padding: 40px 0 60px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 50px 0 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 50px 0 100px;
+    }
+}
+
+.catalog__title {
+    margin-bottom: 30px;
+
+    @include breakpoint(md) {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 50px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 60px;
+    }
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @include breakpoint(lg) {
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    @include breakpoint(xl) {
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+}
+
+.catalog__block {
+    padding-bottom: 18px;
+    background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    height: calc((50vw - 30px) * 1.27);
+    min-height: 165px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        padding-bottom: 30px;
+        height: calc((50vw - 40px) * 1.09);
+    }
+
+    @include breakpoint(lg) {
+        width: calc((100% - 60px) / 3);
+        height: calc(((100vw - 140px) / 3) * 1.23);
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 40px;
+        width: 373px;
+        height: 460px;
+    }
+}
+
+.catalog__image {
+    width: 100%;
+    height: calc((50vw - 30px) / 1.26);
+    text-align: right;
+
+    @include breakpoint(md) {
+        height: calc((50vw - 40px) / 1.23);
+    }
+
+    @include breakpoint(lg) {
+        height: calc(((100vw - 140px) / 3) / 1.09);
+    }
+
+    @include breakpoint(xl) {
+        height: 348px;
+    }
+}
+
+.catalog__image img {
+    height: 100%;
+}
+
+.catalog__desc {
+    margin-top: auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    @include breakpoint(md) {
+        padding: 0 20px;
+    }
+}
+
+.catalog__label {
+    max-width: 90px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 14px;
+    color: $black;
+    text-align: left;
+    text-transform: uppercase;
+    @include textLimit(3);
+
+    @include breakpoint(md) {
+        max-width: 194px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    // POPUP AUTH
     $('.button-acc, .user__menu').on('click', function() {
         $('body').addClass('overflow-hidden')
         $('#page').addClass('bg-overlay');
@@ -43,6 +44,20 @@ $(document).ready(function() {
         } else {
             $(this).parent().find('[type="text"]').attr('type', 'password')
         }
+    })
+
+
+    // POPUP QUESTION
+    $('.product__banner-inner .button-style').on('click', function() {
+        $('body').addClass('overflow-hidden')
+        $('#page').addClass('bg-overlay');
+        $('.popup-question').addClass('open')
+    })
+
+    $('.close-question').on('click', function() {
+        $('body').removeClass('overflow-hidden')
+        $('#page').removeClass('bg-overlay');
+        $('.popup-question').removeClass('open')
     })
 
 })

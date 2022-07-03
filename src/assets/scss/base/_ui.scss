@@ -110,6 +110,7 @@ textarea {
     resize: none;
     border: none;
     outline: none;
+    box-sizing: content-box;
 }
 
 button {

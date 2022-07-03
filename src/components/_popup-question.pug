@@ -5,7 +5,7 @@
         .close-question
 
         h3.question__title Задать вопрос
-        p.question__label Заполните форму обратной связи, мы свяжемся с Вами и ответим на все вопросы о товаре
+        p.question__text Заполните форму обратной связи, мы свяжемся с Вами и ответим на все вопросы о товаре
 
         .question__body
 
@@ -24,5 +24,6 @@
                         label.input-label Вопрос
                         textarea(required)
 
-                    button#submitLogin.button-style.button-style--red(type="submit") Отправить вопрос
-                    small Нажимая на кнопку, соглашаетесь на обработку персональных данных
+                    .popup-question__submit
+                        button#sendQuest.button-style.button-style--red(type="submit") Отправить вопрос
+                        small Нажимая на кнопку, соглашаетесь на обработку персональных данных
