@@ -20,8 +20,10 @@ $('.filter__label').on('click', function() {
 
 $('.filter-btn').on('click', function() {
     $('.filter').addClass('opened')
+    $('body').addClass('overflow-hidden')
 })
 
 $('.filter-close').on('click', function() {
     $('.filter').removeClass('opened')
+    $('body').removeClass('overflow-hidden')
 })

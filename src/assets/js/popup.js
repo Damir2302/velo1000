@@ -9,8 +9,12 @@ $(document).ready(function() {
 
     $('.close-auth').on('click', function() {
         $('body').removeClass('overflow-hidden')
-        $('#page').removeClass('bg-overlay');
+        $('#page').removeClass('bg-overlay')
         $('.popup-auth').removeClass('open')
+
+        $('.button-menu').removeClass('opened')
+        $('.header__right').removeClass('mobile-menu')
+        $('.submenu__mobile').slideUp()
     })
 
     $('.input-style input, .input-style textarea').on('focus', function() {
