@@ -140,12 +140,15 @@ $(document).ready(function() {
             !$(e.target).closest('.button-acc').length &&
             !$(e.target).closest('.popup-auth__inner').length &&
             !$(e.target).closest('.product__banner-inner .button-style').length &&
-            !$(e.target).closest('.popup-question__inner').length) {
+            !$(e.target).closest('.popup-question__inner').length &&
+            !$(e.target).closest('.top__select').length) {
             $('.header__search').removeClass('active')
             $('body').removeClass('overflow-hidden')
             $('#page').removeClass('bg-overlay')
             $('.popup-auth').removeClass('open')
             $('.popup-question').removeClass('open')
+            $('.select').slideUp();
+            $('.top__select').removeClass('active');
         }
     })
 

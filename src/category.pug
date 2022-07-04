@@ -15,4 +15,173 @@ block main
 
         .container
 
-            .catalog
+            .category__wrapper
+
+                // Filter::Start
+                .category__filter
+
+                    // MOBILE ONLY
+                    button.filter-btn.button-style.button-style--red Фильтр
+
+                    .filter
+
+                        .filter__title-mobile Фильтр
+                            .filter-close
+
+                        .filter__inner
+
+                            .filter__row
+                                .filter__label.active Цена ₽
+                                .filter__item
+                                    .filter__input
+                                        input(type="text")
+                                        span
+                                        input(type="text")
+
+                            .filter__row
+                                .filter__label.active Наличие
+                                .filter__item
+                                    .filter__checkbox
+                                        .input-style-checkbox
+                                            input#stock-1(type="checkbox" checked)
+                                            label(for="stock-1") Склад
+
+                                        .input-style-checkbox
+                                            input#stock-2(type="checkbox" checked)
+                                            label(for="stock-2") Магазин м.Сокольники
+
+                                        .input-style-checkbox
+                                            input#stock-3(type="checkbox")
+                                            label(for="stock-3") Магазин м.Беломорская
+
+                                        .input-style-checkbox
+                                            input#stock-4(type="checkbox")
+                                            label(for="stock-4") Магазин м.Водный Стадион
+
+                            .filter__row
+                                .filter__label Марка
+
+                            .filter__row
+                                .filter__label Тип катания
+
+                            .filter__row
+                                .filter__label Цвет
+
+                            .filter__row
+                                .filter__label размер колеса
+
+                            .filter__row
+                                .filter__label тип корда
+
+
+                        .filter__bottom
+
+                            span Подобрано 2038 товаров
+
+                            button.button-style.button-style--red Показать товары
+                            button.button-style.button-style--transparent_red Сбросить фильтр
+
+                // Filter::End
+
+                .category__inner
+
+                    .filter-top
+
+                        .top__select
+                            p.selected-option По популярности
+                            .select
+                                a.select-option.selected(href="javascript:void(0)") По популярности
+                                a.select-option(href="javascript:void(0)") Сначала дорогие
+                                a.select-option(href="javascript:void(0)") Сначала дешёвые
+                                a.select-option(href="javascript:void(0)") По новизне
+
+                        .top__view
+
+                            .top__items
+                                .top__items-count 12
+                                .top__items-count 18
+                                .top__items-count 24
+
+                            .top__columns
+                                .view-tiles
+                                .view-lists
+
+                    .category__container
+
+                        .product__block
+                            .product__image.special-price
+                                img(src="assets/images/item.jpg", alt="img")
+                            .product__item
+                                p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                .product__card
+                                    p.product__price 10 000 000 ₽
+                                    .product__card-btn
+                                        .product__card-actions
+                                            a.compare-btn(href="#")
+                                                .action-icon
+                                                    img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                            a.favorite-btn(href="#")
+                                                .action-icon
+                                                    i.fal.fa-heart
+                                        a.cart-btn(href="#")
+                                            .action-icon
+                                                i.far.fa-cart-shopping
+                        .product__block
+                            .product__image
+                                img(src="assets/images/item.jpg", alt="img")
+                            .product__item
+                                p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                .product__card
+                                    p.product__price 10 000 000 ₽
+                                    .product__card-btn
+                                        .product__card-actions
+                                            a.compare-btn(href="#")
+                                                .action-icon
+                                                    img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                            a.favorite-btn(href="#")
+                                                .action-icon
+                                                    i.fal.fa-heart
+                                        a.cart-btn(href="#")
+                                            .action-icon
+                                                i.far.fa-cart-shopping
+
+                        .product__block
+                            .product__image
+                                img(src="assets/images/item.jpg", alt="img")
+                            .product__item
+                                p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                .product__card
+                                    p.product__price 10 000 000 ₽
+                                    .product__card-btn
+                                        .product__card-actions
+                                            a.compare-btn(href="#")
+                                                .action-icon
+                                                    img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                            a.favorite-btn(href="#")
+                                                .action-icon
+                                                    i.fal.fa-heart
+                                        a.cart-btn(href="#")
+                                            .action-icon
+                                                i.far.fa-cart-shopping
+
+                        .product__block
+                            .product__image
+                                img(src="assets/images/item.jpg", alt="img")
+                            .product__item
+                                p.product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                                .product__card
+                                    p.product__price 10 000 000 ₽
+                                    .product__card-btn
+                                        .product__card-actions
+                                            a.compare-btn(href="#")
+                                                .action-icon
+                                                    img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                            a.favorite-btn(href="#")
+                                                .action-icon
+                                                    i.fal.fa-heart
+                                        a.cart-btn(href="#")
+                                            .action-icon
+                                                i.far.fa-cart-shopping
+
+                    // LOAD MORE BUTTON
+                    a.button-style.button-style--red Загрузить ещё

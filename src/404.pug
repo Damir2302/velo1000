@@ -1,0 +1,19 @@
+---
+title: Velo1000 | Страница не найдена
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Страница не найдена')
+    // Breadcrumbs::End
+
+    .page-404
+
+        .container
+
+            p 404
+            a(href="/") На главную
