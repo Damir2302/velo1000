@@ -56,9 +56,26 @@ block main
                                         i.far.fa-cart-shopping
 
 
-            .compare__table
+            .compare__section
 
-                label.input-checkbox-circle(for="policy")
-                    input#policy(type="checkbox", name="differences" aria-hidden="true")
-                    .checkbox-bg
-                span Отображать только различия
+                .compare__checkbox
+                    label.input-checkbox-circle(for="differences")
+                        input#differences(type="checkbox", name="differences" aria-hidden="true")
+                        .checkbox-bg
+                    span Отображать только различия
+
+                .compare__table
+
+                    .compare__col
+                        .compare__value(data-label="Артикул") 1245678
+                        .compare__value(data-label="Тип катания") Кросс-кантри
+                        .compare__value(data-label="Цвет") Чёрный
+                        .compare__value(data-label="Размер колеса") 27 дюймов
+                        .compare__value(data-label="Тип корда") Радиальный
+
+                    .compare__col
+                        .compare__value(data-label="Артикул") 133466
+                        .compare__value(data-label="Тип катания") Кросс-кантри
+                        .compare__value(data-label="Цвет") Красный
+                        .compare__value(data-label="Размер колеса") 28 дюймов
+                        .compare__value(data-label="Тип корда") Радиальный
