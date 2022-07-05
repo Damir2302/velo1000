@@ -1,0 +1,64 @@
+---
+title: Velo1000 | Сравнение товаров
+---
+
+extends includes/_page
+
+block main
+
+    // Breadcrumbs::Start
+    include components/_breadcrumbs
+    +breadcrumbs('Сравнение товаров', 'Сравнение товаров')
+    // Breadcrumbs::End
+
+    .page-compare
+
+        .container
+
+            .product__compare
+
+                .product__block
+                    a(href="#").product__image.special-price
+                        img(src="assets/images/item.jpg", alt="img")
+                    .product__item
+                        a(href="#").product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                        .product__card
+                            p.product__price 10 000 000 ₽
+                            .product__card-btn
+                                .product__card-actions
+                                    a.compare-btn.added(href="#")
+                                        .action-icon
+                                            img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                    a.favorite-btn(href="#")
+                                        .action-icon
+                                            i.fal.fa-heart
+                                a.cart-btn(href="#")
+                                    .action-icon
+                                        i.far.fa-cart-shopping
+
+                .product__block
+                    a(href="#").product__image
+                        img(src="assets/images/item.jpg", alt="img")
+                    .product__item
+                        a(href="#").product__label BLACK MAMBA CX+ TLRDY 27,5х2,0
+                        .product__card
+                            p.product__price 10 000 000 ₽
+                            .product__card-btn
+                                .product__card-actions
+                                    a.compare-btn.added(href="#")
+                                        .action-icon
+                                            img(src="assets/images/bar-chart-2.svg", alt="icon")
+                                    a.favorite-btn(href="#")
+                                        .action-icon
+                                            i.fal.fa-heart
+                                a.cart-btn(href="#")
+                                    .action-icon
+                                        i.far.fa-cart-shopping
+
+
+            .compare__table
+
+                label.input-checkbox-circle(for="policy")
+                    input#policy(type="checkbox", name="differences" aria-hidden="true")
+                    .checkbox-bg
+                span Отображать только различия

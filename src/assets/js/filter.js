@@ -27,3 +27,24 @@ $('.filter-close').on('click', function() {
     $('.filter').removeClass('opened')
     $('body').removeClass('overflow-hidden')
 })
+
+$('.grid-style').on('click', function() {
+    $(this).parent().find('.grid-style').removeClass('active')
+    $(this).addClass('active')
+})
+
+$('.top__columns .grid-style').on('click', function() {
+    if ($(this).hasClass('view-lists')) {
+        localStorage.setItem('product-views', 'view-lists')
+        $('.category__container').addClass('view-lists-active')
+    } else {
+        localStorage.removeItem('product-views', 'view-lists')
+        $('.category__container').removeClass('view-lists-active')
+    }
+})
+
+if (localStorage.getItem('product-views') == 'view-lists') {
+    $('.category__container').addClass('view-lists-active')
+    $('.top__columns .grid-style').removeClass('active')
+    $('.top__columns .view-lists').addClass('active')
+}

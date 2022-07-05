@@ -1,0 +1,27 @@
+.page-compare {
+    padding: 30px 0 60px;
+
+    @include breakpoint(md) {
+        padding: 40px 0 60px;
+    }
+
+    @include breakpoint(lg) {
+        padding: 60px 0 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 70px 0 100px;
+    }
+}
+
+.product__compare {
+    display: inline-block;
+    border: 1px solid #E7E7E7;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.product__compare .product__block {
+    display: inline-block;
+    width: 295px;
+}

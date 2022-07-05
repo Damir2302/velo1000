@@ -714,7 +714,6 @@
     }
 
     @include breakpoint(xl) {
-        width: 300px;
         height: 300px;
     }
 }
@@ -727,17 +726,16 @@
     top: 20px;
     left: 20px;
     font-weight: 700;
+    font-size: 11px;
     border-radius: 50px;
 
     @include breakpoint(lg) {
         padding: 10px;
-        font-size: 11px;
         text-transform: uppercase;
     }
 }
 
 .product__image img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -810,12 +808,22 @@
     border-radius: 50%;
 }
 
+.product__card-btn .compare-btn.added {
+    color: $black;
+    border-color: $black;
+}
+
 .product__card-btn .favorite-btn {
     margin-left: 6px;
     width: 32px;
     height: 32px;
     border: 1px solid #E7E7E7;
     border-radius: 50%;
+}
+
+.product__card-btn .favorite-btn.added {
+    color: $red;
+    border-color: $red;
 }
 
 .product__card-btn .action-icon {
@@ -836,6 +844,7 @@
     height: 32px;
     color: #fff;
     border-radius: 3px;
+    transition: all 0.5s ease;
 
     @include breakpoint(md) {
         margin-left: 20px;
@@ -844,6 +853,16 @@
     @include breakpoint(xl) {
         margin-left: 12px;
     }
+}
+
+.product__card-btn .cart-btn:not(.added):hover {
+    background: #9d0c0c;
+}
+
+.product__card-btn .cart-btn.added {
+    background: transparent;
+    color: $red;
+    border: 1px solid $red;
 }
 
 .product__card-actions {

@@ -189,13 +189,15 @@ $(document).ready(function() {
     })
 
     // PRODUCT PAGE TABS
-    let tabsSlide = new Swiper(".product__tabs", {
-        slidesPerView: 'auto',
-        freeMode: true
-    })
+    if ($('.product__tabs').length) {
+        let tabsSlide = new Swiper(".product__tabs", {
+            slidesPerView: 'auto',
+            freeMode: true
+        })
 
-    if ($(window).width() >= 744) {
-        tabsSlide.destroy()
+        if ($(window).width() >= 744) {
+            tabsSlide.destroy()
+        }
     }
 
     $('.tab-nav').on('click', function() {
