@@ -48,3 +48,22 @@ if (localStorage.getItem('product-views') == 'view-lists') {
     $('.top__columns .grid-style').removeClass('active')
     $('.top__columns .view-lists').addClass('active')
 }
+
+// COMPARE PAGE FILTER
+$('#differences').on('click', function() {
+    for (let i = 0; i < $('.compare__value[data-option]').length; i++) {
+
+        let compares = $(`.compare__value[data-option=${i}]`);
+
+        let uniq = [];
+
+        compares.each(function(e) {
+            uniq.push(compares[e].innerText)
+            uniq = [... new Set(uniq)]
+        })
+
+        if (uniq.length == 1) {
+            $(`.compare__value[data-option=${i}]`).slideToggle()
+        }
+    }
+})

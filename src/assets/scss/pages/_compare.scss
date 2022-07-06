@@ -2,7 +2,7 @@
     padding: 30px 0 60px;
 
     @include breakpoint(md) {
-        padding: 40px 0 60px;
+        padding: 40px 0 80px;
     }
 
     @include breakpoint(lg) {
@@ -15,19 +15,32 @@
 }
 
 .product__compare {
-    display: inline-block;
-    border: 1px solid #E7E7E7;
-    border-radius: 15px;
-    overflow: hidden;
+    display: flex;
 }
 
 .product__compare .product__block {
     display: inline-block;
-    width: 295px;
+    // min-width: 298px;
+    // max-width: 298px;
+    border: 1px solid #E7E7E7;
+    overflow: hidden;
+}
+
+.product__compare .product__block ~ .product__block {
+    border-left: none;
+}
+
+.product__compare .product__block:first-child {
+    border-radius: 15px 0 0 15px;
+}
+
+.product__compare .product__block:last-child {
+    border-radius: 0 15px 15px 0;
 }
 
 .compare__section {
     margin-top: 30px;
+    position: relative;
     font-size: 14px;
     color: $black;
 }
@@ -46,8 +59,8 @@
 }
 
 .compare__col {
-    min-width: 295px;
-    max-width: 295px;
+    // min-width: 298px;
+    // max-width: 298px;
 }
 
 .compare__col:last-child {
@@ -58,23 +71,42 @@
 .compare__value {
     padding: 8px 0;
     display: flex;
-    align-items: flex-end;
-    height: 70px;
-    border-bottom: 1px solid #E7E7E7;
-}
-
-.compare__col:first-child .compare__value {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    height: 50px;
+    border-bottom: 1px solid #E7E7E7;
 }
 
-.compare__col:first-child .compare__value::before {
+.compare__value::before {
     content: attr(data-label);
     color: #686461;
 }
 
 .compare__value:first-child {
     border-top: 1px solid #E7E7E7;
+}
+
+.compare__arrows {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: calc(50% - 40px);
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+
+    @include breakpoint(md) {
+        top: calc(100% + 40px);
+    }
+}
+
+.compare__arrows .swiper-button {
+    background: none;
+    position: static;
+    color: $red;
+}
+
+.compare__arrows .swiper-button::after {
+    font-size: 900;
+    font-size: 24px;
 }

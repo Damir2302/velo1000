@@ -26,4 +26,44 @@ $(document).ready(function() {
         }
     });
 
+    let compareSlider = new Swiper(".product__compare", {
+      slidesPerView: 1,
+      freeMode: true,
+      allowTouchMove: false,
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        },
+        1024: {
+          slidesPerView: 4
+        }
+      },
+
+      navigation: {
+        nextEl: '.compare__arrows .swiper-button-next',
+        prevEl: '.compare__arrows .swiper-button-prev',
+      }
+    });
+
+    let tableSlider = new Swiper(".compare__table", {
+      slidesPerView: 1,
+      freeMode: true,
+      allowTouchMove: false,
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        },
+        1024: {
+          slidesPerView: 4
+        }
+      },
+
+      navigation: {
+        nextEl: '.compare__arrows .swiper-button-next',
+        prevEl: '.compare__arrows .swiper-button-prev',
+      }
+    });
+
 })
